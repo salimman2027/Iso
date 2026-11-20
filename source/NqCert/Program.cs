@@ -47,6 +47,8 @@ builder.Services.AddRateLimiter(o =>
     o.RejectionStatusCode = 429;
     o.AddPolicy("login", ctx => RateLimitPartition.GetFixedWindowLimiter(ctx.Connection.RemoteIpAddress?.ToString() ?? "x",
         _ => new FixedWindowRateLimiterOptions { PermitLimit = 10, Window = TimeSpan.FromMinutes(1) }));
+    o.AddPolicy("public", ctx => RateLimitPartition.GetFixedWindowLimiter(ctx.Connection.RemoteIpAddress?.ToString() ?? "x",
+        _ => new FixedWindowRateLimiterOptions { PermitLimit = 60, Window = TimeSpan.FromMinutes(1) }));
 });
 builder.Services.ConfigureHttpJsonOptions(o =>
 {
@@ -494,6 +496,57 @@ app.MapPost("/api/emergency/{action}", async (string action, JsonObject? body, H
     await db.SaveChangesAsync();
     return Results.Ok(new { ok = true });
 });
+
+// ---------------- QR + public certificate verification ----------------
+app.MapGet("/qr", (string? d) =>
+{
+    d ??= ""; if (d.Length > 600) d = d[..600];
+    using var gen = new QRCoder.QRCodeGenerator();
+    using var data = gen.CreateQrCode(d, QRCoder.QRCodeGenerator.ECCLevel.M);
+    var svg = new QRCoder.SvgQRCode(data).GetGraphic(new System.Drawing.Size(256, 256), "#000000", "#ffffff", true, QRCoder.SvgQRCode.SizingMode.ViewBoxAttribute);
+    return Results.Text(svg, "image/svg+xml");
+}).RequireRateLimiting("public");
+
+app.MapGet("/verify", async (string? no, AppDb db) =>
+{
+    if (!dbcfg.Configured) return Results.Text("Not configured", "text/plain");
+    static string H(string? s) => System.Net.WebUtility.HtmlEncode(s ?? "");
+    static string F(string? d) => string.IsNullOrEmpty(d) ? "—" : string.Join("-", d.Split('-').Reverse());
+    JsonArray Arr(string key) { var it = db.Items.AsNoTracking().FirstOrDefault(i => i.Key == key); try { return it == null ? new JsonArray() : JsonNode.Parse(it.Json) as JsonArray ?? new JsonArray(); } catch { return new JsonArray(); } }
+    no = (no ?? "").Trim();
+    JsonObject? c = no == "" ? null : Arr("certificates").OfType<JsonObject>().FirstOrDefault(x => string.Equals((string?)x["no"], no, StringComparison.OrdinalIgnoreCase));
+    string body;
+    if (c == null)
+        body = $"<div class='st bad'>✕</div><h1>الشهادة غير موجودة<br><small>Certificate not found</small></h1><p class='no'>{H(no)}</p><p class='mu'>تأكد من رقم الشهادة أو تواصل مع الجهة المانحة.<br>Please check the number or contact the issuing body.</p>";
+    else
+    {
+        var comp = Arr("companies").OfType<JsonObject>().FirstOrDefault(x => Perm.Int(x["id"]) == Perm.Int(c["comp"]));
+        var std = Arr("standards").OfType<JsonObject>().FirstOrDefault(x => Perm.Int(x["id"]) == Perm.Int(c["std"]));
+        var status = (string?)c["status"] ?? "";
+        var exp = (string?)c["extDate"]; if (string.IsNullOrEmpty(exp)) exp = (string?)c["exp"];
+        bool valid = status == "ساري" && (string.IsNullOrEmpty(exp) || string.CompareOrdinal(exp, DateTime.UtcNow.ToString("yyyy-MM-dd")) >= 0);
+        var en = status switch { "ساري" => "Valid", "منتهي" => "Expired", "ملغي" => "Withdrawn", "موقوف" => "Suspended", "قيد الإصدار" => "Being issued", _ => status };
+        if (status == "ساري" && !valid) { status = "منتهي"; en = "Expired"; }
+        var cname = (string?)comp?["nameEn"]; if (string.IsNullOrEmpty(cname)) cname = (string?)comp?["name"];
+        body = $@"<div class='st {(valid ? "ok" : "bad")}'>{(valid ? "✓" : "!")}</div>
+<h1>{(valid ? "شهادة سارية" : "الشهادة غير سارية")}<br><small>{(valid ? "Valid certificate" : "Certificate is not valid")} — {H(en)}</small></h1>
+<table><tr><th>رقم الشهادة<br><small>Certificate No.</small></th><td dir='ltr'>{H((string?)c["no"])}</td></tr>
+<tr><th>الجهة<br><small>Organization</small></th><td>{H(cname)}</td></tr>
+<tr><th>المعيار<br><small>Standard</small></th><td dir='ltr'>{H((string?)std?["code"])}</td></tr>
+<tr><th>الحالة<br><small>Status</small></th><td>{H(status)} / {H(en)}</td></tr>
+<tr><th>تاريخ الإصدار<br><small>Issue date</small></th><td dir='ltr'>{F((string?)c["issue"])}</td></tr>
+<tr><th>تاريخ الانتهاء<br><small>Expiry date</small></th><td dir='ltr'>{F(exp)}</td></tr></table>";
+    }
+    var html = $@"<!DOCTYPE html><html lang='ar' dir='rtl'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>التحقق من الشهادة — Certificate verification</title>
+<style>body{{margin:0;font-family:Segoe UI,Tahoma,sans-serif;background:#f4f6fc;color:#0f1250;display:flex;min-height:100vh;align-items:center;justify-content:center;padding:16px;box-sizing:border-box}}
+.c{{background:#fff;border-radius:28px;box-shadow:0 20px 50px rgba(15,18,80,.1);padding:32px 28px;max-width:520px;width:100%;text-align:center}}
+.st{{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;font-size:36px;color:#fff;font-weight:700}}.ok{{background:#00a37a}}.bad{{background:#e0384b}}
+h1{{font-size:22px;margin:0 0 18px}}h1 small{{font-size:14px;color:#5f6589;font-weight:500}}table{{width:100%;border-collapse:collapse;text-align:start}}
+th,td{{padding:11px 8px;border-bottom:1px solid #e6e9f5;font-size:14px;vertical-align:top}}th{{color:#5f6589;font-weight:600;width:42%}}th small{{font-weight:400}}
+.no{{font-size:18px;font-weight:700;direction:ltr}}.mu{{color:#5f6589;font-size:14px;line-height:1.7}}.f{{margin-top:18px;color:#5f6589;font-size:12px}}</style></head>
+<body><div class='c'>{body}<div class='f'>National Quality — Certificate verification</div></div></body></html>";
+    return Results.Content(html, "text/html; charset=utf-8");
+}).RequireRateLimiting("public");
 
 app.MapFallback(async ctx =>
 {

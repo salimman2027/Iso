@@ -148,7 +148,7 @@ public static class Perm
         ["docs"] = ["companies", "certificates"],
         ["plans"] = ["certificates", "audits", "settings"],
         ["scopes"] = ["certificates"],
-        ["numbering"] = ["settings"], ["lists"] = ["settings"], ["ui"] = ["settings"],
+        ["numbering"] = ["settings"], ["lists"] = ["settings"], ["ui"] = ["settings"], ["certTpl"] = ["settings"],
         ["usedNos"] = ["certificates", "audits"],
         ["auditorCategories"] = ["auditors"], ["auditorScopes"] = ["auditors"], ["auditorCV"] = ["auditors"],
         ["auditorRoles"] = ["auditors"], ["auditorDocs"] = ["auditors"], ["auditorCerts"] = ["auditors"],
@@ -162,7 +162,7 @@ public static class Perm
         ["students"] = "المتدربون", ["courses"] = "الدورات", ["sessions"] = "الدورات المنفذة", ["invoices"] = "الفوترة",
         ["tasks"] = "المهام", ["queries"] = "الاستفسارات", ["contacts"] = "جهات الاتصال", ["sites"] = "المواقع",
         ["docs"] = "المستندات", ["plans"] = "خطط المراجعات", ["scopes"] = "النطاقات", ["numbering"] = "ترقيم الشهادات",
-        ["lists"] = "قوائم الإعدادات", ["ui"] = "المظهر", ["usedNos"] = "أرقام الشهادات", ["roles"] = "الأدوار والصلاحيات",
+        ["lists"] = "قوائم الإعدادات", ["ui"] = "المظهر", ["certTpl"] = "نموذج الشهادة", ["usedNos"] = "أرقام الشهادات", ["roles"] = "الأدوار والصلاحيات",
     };
     public static string Label(string k) => Labels.TryGetValue(k, out var l) ? l : k.StartsWith("auditor") ? "ملفات المراجعين" : k;
 
