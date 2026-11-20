@@ -2,7 +2,10 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a5a58">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>إدارة الشهادات والمراجعات — NQ</title>
 <style>
 :root{--p:#0F7C7A;--pd:#0A5654;--pl:#E7F3F2;--bd:#D5E2E1;--tx:#1C2B2A;--mu:#6b7c7b;--bg:#f4f7f7;--wh:#fff;
@@ -114,6 +117,126 @@ body.locked #login{display:flex}
 .emgbar{background:var(--bad);color:#fff;text-align:center;font-size:12px;padding:5px;font-weight:bold}
 .usr a{cursor:pointer}
 input:disabled,select:disabled,textarea:disabled{background:#f3f6f6;color:var(--tx)}
+/* ================= تصميم محسّن ================= */
+:root{--p:#0d7a77;--pd:#0a5a58;--pl:#e7f4f3;--bd:#e3ebeb;--tx:#16302f;--mu:#6b7f7e;--bg:#f2f5f6;--r:14px;--sh:0 1px 2px rgba(16,40,40,.05),0 6px 20px rgba(16,40,40,.06)}
+body{font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased;background:var(--bg)}
+header{background:linear-gradient(115deg,#063b3a 0%,#0b6b68 55%,#12938e 100%);box-shadow:0 4px 18px rgba(6,59,58,.22);position:sticky;top:0;z-index:30}
+.hd{padding:10px 20px;gap:14px}
+.hgrp{display:flex;align-items:center;gap:10px}
+.logo .mk{border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.18);font-weight:700}
+.logo b{font-weight:700;letter-spacing:.2px}
+.ttl h1{font-size:18px;font-weight:700;letter-spacing:.2px}.ttl small{opacity:.7;font-size:11px}
+.bc{background:rgba(0,0,0,.16)}.bc div{font-size:12px}
+.usr{display:flex;align-items:center;gap:10px;text-align:right}
+.av{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;font-weight:700;font-size:15px;flex:none}
+.unm{display:flex;flex-direction:column;line-height:1.25;min-width:0}.unm b{font-size:13px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px}
+#sync{font-size:11px}
+.uact{display:flex;gap:6px}
+.uact a{color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:9px;padding:6px 10px;font-size:12px;display:flex;gap:6px;align-items:center;white-space:nowrap}
+.uact a:hover{background:rgba(255,255,255,.24)}
+#menuBtn{display:none;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);color:#fff;width:40px;height:40px;border-radius:11px;cursor:pointer;place-items:center;flex:none}
+#menuBtn i.fa{width:22px;height:22px}
+#ovl{display:none}
+.wrap{gap:18px;padding:18px}
+aside{border:0;box-shadow:var(--sh);border-radius:var(--r);padding:10px;top:118px;max-height:calc(100vh - 134px);overflow:auto;width:240px}
+aside .sec{font-size:11px;letter-spacing:.3px;padding:12px 12px 4px;opacity:.85}
+aside a{padding:9px 12px;border-radius:10px;font-size:13.5px;transition:background .15s}
+aside a:hover{background:var(--pl)}
+aside a.on{background:linear-gradient(115deg,var(--pd),var(--p));color:#fff;font-weight:600;box-shadow:0 3px 10px rgba(13,122,119,.28)}
+aside a.on i{color:#fff}
+.card{border:0;box-shadow:var(--sh);border-radius:var(--r);padding:20px;margin-bottom:16px}
+h2{font-size:17px;font-weight:700;color:var(--pd)}
+h2 small{font-weight:400}
+.kpis{gap:14px;margin-bottom:16px}
+.kpi{border:0;border-right:4px solid var(--p);box-shadow:var(--sh);border-radius:var(--r);padding:14px 16px}
+.kpi span{font-size:12.5px}.kpi b{font-size:24px;font-weight:700;color:var(--tx)}
+.tiles{gap:14px}
+.tile{border-radius:var(--r);background:linear-gradient(150deg,#12918c,#0a5a58);box-shadow:0 6px 18px rgba(10,90,88,.22);height:112px;gap:8px}
+.tile:hover{background:linear-gradient(150deg,#0f7f7b,#084846);transform:translateY(-3px)}
+.tile b{font-size:13.5px;font-weight:600}
+.tile .cnt{top:10px;left:10px;font-size:11px;padding:2px 9px}
+.flt{background:#f7fafa;border:1px solid var(--bd);border-radius:12px;padding:12px 14px}
+.fld label{font-size:12px;font-weight:500}
+input,select,textarea{border-radius:9px;padding:9px 11px;font-size:14px;border-color:#d7e2e2;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--p);box-shadow:0 0 0 3px rgba(13,122,119,.14)}
+.btn{border-radius:9px;padding:9px 16px;font-weight:600;transition:background .15s,box-shadow .15s}
+.btn:hover{box-shadow:0 3px 10px rgba(13,122,119,.25)}
+.btn.l:hover{background:var(--pl)}
+.ic{border-radius:8px;width:32px;height:32px;display:inline-grid;place-items:center;border-color:#d7e2e2}
+.tw{border:1px solid var(--bd);border-radius:12px}
+table{border-collapse:separate;border-spacing:0}
+th{background:#f2f8f8;color:var(--pd);font-weight:700;font-size:12.5px;border-bottom:1px solid var(--bd);padding:11px 12px}
+td{border-bottom:1px solid #edf2f2;padding:10px 12px}
+tbody tr:last-child td{border-bottom:0}
+tr:hover td{background:#f8fbfb}
+.bdg{border-radius:20px;padding:3px 10px;font-weight:600}
+.pg{margin-top:12px}
+.af{gap:18px}.af nav a{border-radius:9px;margin-bottom:2px}
+.mv{border-radius:12px;background:#fafcfc}
+.cal{border-radius:12px}.cal .h{background:#f2f8f8;color:var(--pd)}
+.modal{background:rgba(6,30,30,.5);backdrop-filter:blur(2px)}
+.modal .box{border-radius:18px;box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.modal .mh{background:#fff;color:var(--pd);border-bottom:1px solid var(--bd);padding:14px 18px;font-size:15px;align-items:center}
+.modal .mh a{color:var(--mu)!important}
+.modal .mb{padding:18px}.modal .mf{background:#fafcfc}
+.toast{left:50%;transform:translateX(-50%);bottom:22px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25);padding:11px 18px;max-width:calc(100vw - 32px);text-align:center}
+#login{background:radial-gradient(circle at 20% 20%,#14a19b 0,transparent 45%),linear-gradient(135deg,#063b3a,#0d7a77)}
+.lbox{border-radius:22px;padding:30px 26px;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+.lbox input{font-size:16px;padding:11px 12px}
+.note,.robadge{border-radius:12px}
+.cal-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+@media(max-width:900px){
+ #menuBtn{display:grid}
+ .hd{padding:8px 12px;gap:8px;flex-wrap:nowrap}
+ .ttl{display:none}
+ .logo{gap:8px}.logo .mk{width:36px;height:36px;font-size:14px;border-radius:10px}
+ .logo b{font-size:13px;max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.logo small{display:none}
+ .usr{gap:6px}.unm{display:none}.uact a{padding:0;width:36px;height:36px;justify-content:center}.uact a span{display:none}
+ .av{width:34px;height:34px;font-size:14px}
+ .bc div{padding:6px 12px;white-space:nowrap;overflow-x:auto}
+ .wrap{padding:12px;gap:12px;flex-direction:column}
+ aside{position:fixed;top:0;bottom:0;right:0;width:84vw;max-width:300px;max-height:none;border-radius:18px 0 0 18px;z-index:50;transform:translateX(110%);transition:transform .25s ease;display:block;padding:16px 10px}
+ body.nav-open aside{transform:none}
+ body.nav-open #ovl{display:block;position:fixed;inset:0;background:rgba(0,0,0,.42);z-index:45}
+ aside a{padding:11px 12px;font-size:14.5px}
+ .card{padding:14px;border-radius:12px}
+ h2{font-size:15.5px;flex-wrap:wrap;gap:6px}
+ .kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.kpi{padding:12px}.kpi b{font-size:19px}
+ .tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tile{height:98px}.tile i.fa{width:28px;height:28px}
+ .flt{padding:10px;gap:10px}.fld{min-width:0;flex:1 1 140px}
+ .flt>.btn{flex:1 1 auto;justify-content:center}
+ input,select,textarea{font-size:16px}
+ .grid2{grid-template-columns:1fr}
+ /* الجداول تتحول لكروت */
+ .tw{border:0;overflow:visible}
+ .tw table,.tw tbody,.tw tr,.tw td{display:block;width:100%}
+ .tw thead{display:none}
+ .tw tr{background:#fff;border:1px solid var(--bd);border-radius:12px;margin-bottom:10px;padding:6px 2px;box-shadow:0 1px 3px rgba(16,40,40,.04)}
+ .tw td{display:flex;justify-content:space-between;align-items:center;gap:12px;border:0;padding:6px 12px;text-align:left;min-height:34px}
+ .tw td:before{content:attr(data-label);color:var(--mu);font-size:12px;font-weight:600;text-align:right;flex:none;max-width:45%}
+ .tw td[data-label=""]:before,.tw td[data-label="#"]:before{display:none}
+ .tw td[data-label=""]{justify-content:flex-end}
+ .tw td:first-child{font-size:15px}
+ .tw tr:hover td{background:none}
+ .tw td input:not([type=checkbox]),.tw td select{max-width:60%}
+ .af{flex-direction:column;gap:12px}
+ .af nav{width:auto;display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+ .af nav a{white-space:nowrap;border:1px solid var(--bd);border-radius:20px;padding:7px 13px;margin:0;font-size:13px}
+ .af nav a.on{background:var(--p);color:#fff;border-color:var(--p)}
+ .steps{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px}.st{min-width:86px;flex:none}
+ .mv{flex-direction:column;gap:10px}.mv .btn{width:100%;justify-content:center}
+ .modal{padding:0;align-items:flex-end}
+ .modal .box{width:100%;max-height:92vh;border-radius:20px 20px 0 0}
+ .modal .mf{position:sticky;bottom:0}.modal .mf .btn{flex:1;justify-content:center;padding:11px}
+ .cal{min-width:720px}
+ .pg{font-size:11.5px}
+ .toast{bottom:16px}
+}
+
+.toast{z-index:100}
+.ferr{grid-column:1/-1;color:var(--bad);font-weight:600;min-height:18px}
+@media(max-width:900px){.tw td{flex-wrap:wrap}.tw td>*{max-width:100%}.bdg{white-space:normal}}
 </style>
 </head>
 <body class="locked">
@@ -123,9 +246,9 @@ input:disabled,select:disabled,textarea:disabled{background:#f3f6f6;color:var(--
  <div id="l_err"></div><button class="btn" onclick="doLogin()">دخول</button></div></div>
 <header>
   <div class="hd">
-    <div class="logo"><div class="mk">NQ</div><div><b>الجودة الوطنية لتقنية المعلومات</b><small>NQ ERP</small></div></div>
+    <div class="hgrp"><button id="menuBtn" onclick="document.body.classList.toggle('nav-open')" aria-label="القائمة"><i class="fa fa-bars"></i></button><div class="logo"><div class="mk">NQ</div><div><b>الجودة الوطنية لتقنية المعلومات</b><small>NQ ERP</small></div></div></div>
     <div class="ttl"><h1>إدارة الشهادات والمراجعات</h1><small>Certificate & Audit Management</small></div>
-    <div class="usr"><span>المستخدم:</span> <b id="uName"></b><span id="sync" style="font-size:11px"></span><span style="display:flex;gap:10px"><a style="color:#cfe7e5" onclick="go('password')">تغيير كلمة المرور</a><a style="color:#cfe7e5" onclick="logout()">تسجيل خروج</a></span></div>
+    <div class="usr"><div class="av" id="uAv">؟</div><div class="unm"><b id="uName"></b><span id="sync"></span></div><div class="uact"><a onclick="go('password')" title="تغيير كلمة المرور"><i class="fa fa-key"></i><span>كلمة المرور</span></a><a onclick="logout()" title="تسجيل خروج"><i class="fa fa-right-from-bracket"></i><span>خروج</span></a></div></div>
   </div>
   <div class="bc"><div id="bc"></div></div>
   <div id="emgbar"></div>
@@ -135,6 +258,7 @@ input:disabled,select:disabled,textarea:disabled{background:#f3f6f6;color:var(--
   <aside id="side"></aside>
   <main id="main"></main>
 </div>
+<div id="ovl" onclick="document.body.classList.remove('nav-open')"></div>
 
 <div class="modal" id="modal"><div class="box"><div class="mh"><span id="mt"></span><a style="color:#fff" onclick="closeM()"><i class="fa fa-xmark"></i></a></div><div class="mb" id="mb"></div><div class="mf"><button class="btn" id="msave"><i class="fa fa-floppy-disk"></i> حفظ</button><button class="btn l" onclick="closeM()">إلغاء</button></div></div></div>
 <div class="toast" id="toast"></div>
@@ -238,7 +362,7 @@ const opts=(arr,sel,all)=>(all?`<option value="">الكل</option>`:"")+arr.map(
 function badge(s){const m={"ساري":"ok","مكتملة":"ok","منفذة":"ok","تم إصدار الفاتورة":"ok","نشط":"ok","تم التنسيق":"info","مجدولة":"info","تم الإنشاء":"mu","قيد الإصدار":"warn","بانتظار الفوترة":"warn","مراجعة إدارية":"warn","مراجعة فنية":"warn","مراجعة اللجنة":"warn","إصدار الشهادة":"info","تمت المراجعة":"info","منتهي":"bad","موقوف":"bad","ملغي":"bad","ملغاة":"bad","غير نشط":"mu","عالية":"bad","متوسطة":"warn","منخفضة":"mu"};return `<span class="bdg b-${m[s]||(s==DONE()?"ok":"mu")}">${s}</span>`}
 function toast(t){const e=$("#toast");e.textContent=t;e.style.display="block";clearTimeout(e._t);e._t=setTimeout(()=>e.style.display="none",2200)}
 function table(cols,rows,empty){if(!rows.length)return `<div class="empty">${empty||"لا توجد بيانات"}</div>`;
- return `<div class="tw"><table><thead><tr>${cols.map(c=>`<th class="${c.c?"c":""}">${c.h}</th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr>${cols.map(c=>`<td class="${c.c?"c":""}">${c.f(r)}</td>`).join("")}</tr>`).join("")}</tbody></table></div><div class="pg"><span>عدد السجلات: ${rows.length}</span><span>صفحة 1 من 1</span></div>`}
+ return `<div class="tw"><table><thead><tr>${cols.map(c=>`<th class="${c.c?"c":""}">${c.h}</th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr>${cols.map(c=>`<td class="${c.c?"c":""}" data-label="${c.h}">${c.f(r)}</td>`).join("")}</tr>`).join("")}</tbody></table></div><div class="pg"><span>عدد السجلات: ${rows.length}</span><span>صفحة 1 من 1</span></div>`}
 const fmtD=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
 const TODAY=()=>fmtD(new Date());
 const NOW=()=>TODAY()+" "+new Date().toTimeString().slice(0,5);
@@ -417,7 +541,7 @@ V.calendar=()=>{const y=calM.getFullYear(),m=calM.getMonth();const first=new Dat
  <button class="btn sm nav" onclick="calM=new Date(new Date().getFullYear(),new Date().getMonth(),1);V.calendar()">اليوم</button>
  <div class="fld"><label>المعيار</label><select onchange="window._calStd=this.value;V.calendar()">${opts(db.standards.map(s=>({v:s.id,t:s.code})),window._calStd,1)}</select></div>
  <span style="font-size:12px"><span class="ev" style="display:inline-block">منسقة</span> <span class="ev t3" style="display:inline-block">جديدة</span> <span class="ev t2" style="display:inline-block">قيد المراجعة</span></span></div>
- <div class="cal">${days.map(d=>`<div class="h">${d}</div>`).join("")}${cells}</div></div>`};
+ <div class="cal-wrap"><div class="cal">${days.map(d=>`<div class="h">${d}</div>`).join("")}${cells}</div></div></div>`};
 
 /* المؤشرات */
 V.indicators=(gen)=>{const f=window._if||{from:dShift(-90),to:dShift(90),std:"",type:""};
@@ -823,7 +947,7 @@ async function doLogin(){const err=t=>{$("#l_err").textContent=t;$("#l_p").value
  $("#l_err").textContent="جارِ الدخول…";const r=await api("POST","/api/login",{username:u,password:p});
  if(!r.ok)return err(r.status==429?"محاولات كثيرة — انتظر دقيقة":(r.data.error||"تعذّر الدخول"));await afterLogin()}
 async function afterLogin(){const m=await api("GET","/api/me");if(!m.ok)return showLogin();ME=m.data;if(!await loadAll())return showLogin("تعذّر تحميل البيانات");startApp()}
-function startApp(){refreshExpiry();document.body.classList.remove("locked");$("#uName").textContent=ME.name||ME.username;
+function startApp(){refreshExpiry();document.body.classList.remove("locked");$("#uName").textContent=ME.name||ME.username;$("#uAv").textContent=(ME.name||ME.username).trim()[0];
  $("#emgbar").innerHTML=isPower()?`<div class="emgbar">دخول طوارئ (erpadmin) — كل الصلاحيات مفتوحة. سجّل الخروج بعد انتهاء الإصلاح.</div>`:"";syncState("ok");go("home");saveSoon()}
 async function logout(){await pushChanges();await api("POST","/api/logout",{});ME=null;SYNC={};showLogin()}
 async function boot(){const s=await api("GET","/api/status");if(s.status==0)return showLogin("تعذّر الاتصال بالسيرفر");if(!s.data.configured)return showSetup();
@@ -834,7 +958,7 @@ const _setItem=MENU.splice(MENU.findIndex(m=>m.k=="settings"),1)[0];
 MENU.push({sec:"النظام"},_setItem,{k:"users",t:"المستخدمون",i:"fa-user-shield"},{k:"roles",t:"الأدوار والصلاحيات",i:"fa-shield-halved"},{k:"activity",t:"سجل النشاط",i:"fa-clock-rotate-left"},{k:"backup",t:"النسخ الاحتياطي",i:"fa-database"});
 side=function(){const out=[];let sec=null;MENU.forEach(m=>{if(m.sec){sec=m.sec;return}if(!canView(m.k))return;if(sec){out.push(`<div class="sec">${sec}</div>`);sec=null}out.push(`<a class="${cur==m.k?"on":""}" onclick="go('${m.k}')"><i class="fa ${m.i}"></i>${m.t}</a>`)});
  $("#side").innerHTML=`<a class="${cur=="home"?"on":""}" onclick="go('home')"><i class="fa fa-house"></i>الرئيسية</a>`+out.join("")};
-const _go2=go;go=function(k,arg){if(!ME)return showLogin();if(!canView(k)){_toast0("ليس لديك صلاحية لهذه الشاشة");k="home";arg=undefined}LAST=[k,arg];_go2(k,arg)};
+const _go2=go;go=function(k,arg){if(!ME)return showLogin();if(!canView(k)){_toast0("ليس لديك صلاحية لهذه الشاشة");k="home";arg=undefined}LAST=[k,arg];document.body.classList.remove('nav-open');_go2(k,arg)};
 function applyRO(){if(!ME)return;const m=MOD[cur];if(!m||VIEW_ONLY.includes(m)||can(m,"edit"))return;const M=$("#main");
  M.querySelectorAll(".crud,.mv,.btn:not(.nav),.ic:not(.nav)").forEach(e=>e.style.display="none");
  M.querySelectorAll("input,select,textarea").forEach(e=>{if(!e.closest(".flt:not(.crud)"))e.disabled=true});
@@ -888,11 +1012,12 @@ function userForm(id){if(!need("users"))return;const r=id?USERS.find(x=>x.id==id
  ${sel("الدور","u_role",db.roles.map(x=>({v:x.id,t:x.name})),r.roleId)}
  ${sel("ربط بمراجع (اختياري)","u_aud",[{v:"",t:"— بدون —"},...db.auditors.map(a=>({v:a.id,t:a.name}))],r.auditorId??"")}
  ${sel("الحالة","u_act",[{v:1,t:"نشط"},{v:0,t:"موقوف"}],r.active?1:0)}<div></div>
- <div class="fld"><label>${id?"كلمة مرور جديدة (اتركها فارغة بدون تغيير)":"كلمة المرور *"}</label><input id="u_p1" type="password" autocomplete="new-password"></div>
- <div class="fld"><label>تأكيد كلمة المرور</label><input id="u_p2" type="password" autocomplete="new-password"></div>`,()=>{
-  if(val("u_p1")!==val("u_p2")){_toast0("تأكيد كلمة المرور غير مطابق");return false}
+ <div class="fld"><label>${id?"كلمة مرور جديدة (اتركها فارغة بدون تغيير)":"كلمة المرور * (6 أحرف على الأقل)"}</label><input id="u_p1" type="password" autocomplete="new-password"></div>
+ <div class="fld"><label>تأكيد كلمة المرور</label><input id="u_p2" type="password" autocomplete="new-password"></div><div id="u_err" class="ferr"></div>`,()=>{
+  const E=t=>{$("#u_err").textContent=t;return false};
+  if(!val("u_user").trim())return E("أدخل اسم المستخدم");if(!id&&!val("u_p1"))return E("أدخل كلمة المرور");if(val("u_p1")&&val("u_p1").length<6)return E("كلمة المرور لازم تكون 6 أحرف على الأقل");if(val("u_p1")!==val("u_p2"))return E("تأكيد كلمة المرور غير مطابق");E("جارِ الحفظ…");
   api("POST","/api/users",{id:id||null,username:val("u_user").trim(),name:val("u_name").trim(),roleId:+val("u_role"),auditorId:val("u_aud")?+val("u_aud"):null,active:val("u_act")=="1",password:val("u_p1")||null})
-   .then(async x=>{if(!x.ok)return _toast0(x.data.error||"تعذّر الحفظ");closeM();_toast0("تم حفظ المستخدم");const m=await api("GET","/api/me");if(!m.ok)return;ME=m.data;$("#uName").textContent=ME.name||ME.username;side();V.users()});
+   .then(async x=>{if(!x.ok)return E(x.data.error||"تعذّر الحفظ");closeM();_toast0("تم حفظ المستخدم");const m=await api("GET","/api/me");if(!m.ok)return;ME=m.data;$("#uName").textContent=ME.name||ME.username;side();V.users()});
   return false})}
 async function userDel(id){if(!need("users"))return;const r=USERS.find(x=>x.id==id);if(!r||!confirm(`حذف المستخدم ${r.username}؟`))return;
  const x=await api("DELETE","/api/users/"+id);if(!x.ok)return _toast0(x.data.error||"تعذّر الحذف");_toast0("تم حذف المستخدم");V.users()}
@@ -955,7 +1080,7 @@ Object.entries(GUARDS).forEach(([m,fns])=>fns.forEach(n=>{const f=window[n];if(t
 const KIND_MOD={contacts:"companies",sites:"companies",cdocs:"companies",queries:"queries",certdocs:"certificates",plans:"certificates",scopes:"certificates"};
 ["addRow","delRow"].forEach(n=>{const f=window[n];window[n]=function(kind,...a){if(!need(KIND_MOD[kind]))return;return f.call(this,kind,...a)}});
 
-Object.assign(ICONS,{'user-shield':'<circle cx="9" cy="7" r="4"/><path d="M2 21c0-4 3-7 7-7 1.3 0 2.5.3 3.5.8"/><path d="M18 13l4 1.5v3c0 2.5-2 3.8-4 4.5-2-.7-4-2-4-4.5v-3z"/>',
+Object.assign(ICONS,{bars:'<path d="M4 7h16M4 12h16M4 17h16"/>','right-from-bracket':'<path d="M9 4H5v16h4M16 8l4 4-4 4M20 12H10"/>','user-shield':'<circle cx="9" cy="7" r="4"/><path d="M2 21c0-4 3-7 7-7 1.3 0 2.5.3 3.5.8"/><path d="M18 13l4 1.5v3c0 2.5-2 3.8-4 4.5-2-.7-4-2-4-4.5v-3z"/>',
 'shield-halved':'<path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M12 2v20"/>',
 database:'<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
 download:'<path d="M12 4v12M7 11l5 5 5-5M4 17v3h16v-3"/>',
