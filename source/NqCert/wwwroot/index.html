@@ -118,9 +118,9 @@ body.locked #login{display:flex}
 .usr a{cursor:pointer}
 input:disabled,select:disabled,textarea:disabled{background:#f3f6f6;color:var(--tx)}
 /* ================= تصميم محسّن ================= */
-:root{--p:#0d7a77;--pd:#0a5a58;--pl:#e7f4f3;--bd:#e3ebeb;--tx:#16302f;--mu:#6b7f7e;--bg:#f2f5f6;--r:14px;--sh:0 1px 2px rgba(16,40,40,.05),0 6px 20px rgba(16,40,40,.06)}
+:root{--p:#0d7a77;--pd:#0a5a58;--pl:#e7f4f3;--bd:#e3ebeb;--tx:#16302f;--mu:#6b7f7e;--bg:#f2f5f6;--r:14px;--pdd:#063b3a;--p2:#12918c;--pa:13,122,119;--pt:#0a5a58;--sh:0 1px 2px rgba(16,40,40,.05),0 6px 20px rgba(16,40,40,.06)}
 body{font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased;background:var(--bg)}
-header{background:linear-gradient(115deg,#063b3a 0%,#0b6b68 55%,#12938e 100%);box-shadow:0 4px 18px rgba(6,59,58,.22);position:sticky;top:0;z-index:30}
+header{background:linear-gradient(115deg,var(--pdd) 0%,var(--pd) 55%,var(--p2) 100%);box-shadow:0 4px 18px rgba(var(--pa),.22);position:sticky;top:0;z-index:30}
 .hd{padding:10px 20px;gap:14px}
 .hgrp{display:flex;align-items:center;gap:10px}
 .logo .mk{border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.18);font-weight:700}
@@ -142,30 +142,30 @@ aside{border:0;box-shadow:var(--sh);border-radius:var(--r);padding:10px;top:118p
 aside .sec{font-size:11px;letter-spacing:.3px;padding:12px 12px 4px;opacity:.85}
 aside a{padding:9px 12px;border-radius:10px;font-size:13.5px;transition:background .15s}
 aside a:hover{background:var(--pl)}
-aside a.on{background:linear-gradient(115deg,var(--pd),var(--p));color:#fff;font-weight:600;box-shadow:0 3px 10px rgba(13,122,119,.28)}
+aside a.on{background:linear-gradient(115deg,var(--pd),var(--p));color:#fff;font-weight:600;box-shadow:0 3px 10px rgba(var(--pa),.28)}
 aside a.on i{color:#fff}
 .card{border:0;box-shadow:var(--sh);border-radius:var(--r);padding:20px;margin-bottom:16px}
-h2{font-size:17px;font-weight:700;color:var(--pd)}
+h2{font-size:17px;font-weight:700;color:var(--pt)}
 h2 small{font-weight:400}
 .kpis{gap:14px;margin-bottom:16px}
-.kpi{border:0;border-right:4px solid var(--p);box-shadow:var(--sh);border-radius:var(--r);padding:14px 16px}
+.kpi{border:0;border-inline-start:4px solid var(--kc,var(--p));box-shadow:var(--sh);border-radius:var(--r);padding:14px 16px}
 .kpi span{font-size:12.5px}.kpi b{font-size:24px;font-weight:700;color:var(--tx)}
 .tiles{gap:14px}
-.tile{border-radius:var(--r);background:linear-gradient(150deg,#12918c,#0a5a58);box-shadow:0 6px 18px rgba(10,90,88,.22);height:112px;gap:8px}
-.tile:hover{background:linear-gradient(150deg,#0f7f7b,#084846);transform:translateY(-3px)}
+.tile{border-radius:var(--r);background:linear-gradient(150deg,var(--p2),var(--pd));box-shadow:0 6px 18px rgba(var(--pa),.22);height:112px;gap:8px}
+.tile:hover{background:linear-gradient(150deg,var(--p),var(--pdd));transform:translateY(-3px)}
 .tile b{font-size:13.5px;font-weight:600}
 .tile .cnt{top:10px;left:10px;font-size:11px;padding:2px 9px}
 .flt{background:#f7fafa;border:1px solid var(--bd);border-radius:12px;padding:12px 14px}
 .fld label{font-size:12px;font-weight:500}
 input,select,textarea{border-radius:9px;padding:9px 11px;font-size:14px;border-color:#d7e2e2;transition:border-color .15s,box-shadow .15s}
-input:focus,select:focus,textarea:focus{outline:0;border-color:var(--p);box-shadow:0 0 0 3px rgba(13,122,119,.14)}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--p);box-shadow:0 0 0 3px rgba(var(--pa),.16)}
 .btn{border-radius:9px;padding:9px 16px;font-weight:600;transition:background .15s,box-shadow .15s}
-.btn:hover{box-shadow:0 3px 10px rgba(13,122,119,.25)}
+.btn:hover{box-shadow:0 3px 10px rgba(var(--pa),.28)}
 .btn.l:hover{background:var(--pl)}
 .ic{border-radius:8px;width:32px;height:32px;display:inline-grid;place-items:center;border-color:#d7e2e2}
 .tw{border:1px solid var(--bd);border-radius:12px}
 table{border-collapse:separate;border-spacing:0}
-th{background:#f2f8f8;color:var(--pd);font-weight:700;font-size:12.5px;border-bottom:1px solid var(--bd);padding:11px 12px}
+th{background:var(--pl);color:var(--pt);font-weight:700;font-size:12.5px;border-bottom:1px solid var(--bd);padding:11px 12px}
 td{border-bottom:1px solid #edf2f2;padding:10px 12px}
 tbody tr:last-child td{border-bottom:0}
 tr:hover td{background:#f8fbfb}
@@ -173,14 +173,14 @@ tr:hover td{background:#f8fbfb}
 .pg{margin-top:12px}
 .af{gap:18px}.af nav a{border-radius:9px;margin-bottom:2px}
 .mv{border-radius:12px;background:#fafcfc}
-.cal{border-radius:12px}.cal .h{background:#f2f8f8;color:var(--pd)}
+.cal{border-radius:12px}.cal .h{background:var(--pl);color:var(--pt)}
 .modal{background:rgba(6,30,30,.5);backdrop-filter:blur(2px)}
 .modal .box{border-radius:18px;box-shadow:0 24px 70px rgba(0,0,0,.28)}
-.modal .mh{background:#fff;color:var(--pd);border-bottom:1px solid var(--bd);padding:14px 18px;font-size:15px;align-items:center}
+.modal .mh{background:#fff;color:var(--pt);border-bottom:1px solid var(--bd);padding:14px 18px;font-size:15px;align-items:center}
 .modal .mh a{color:var(--mu)!important}
 .modal .mb{padding:18px}.modal .mf{background:#fafcfc}
 .toast{left:50%;transform:translateX(-50%);bottom:22px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25);padding:11px 18px;max-width:calc(100vw - 32px);text-align:center}
-#login{background:radial-gradient(circle at 20% 20%,#14a19b 0,transparent 45%),linear-gradient(135deg,#063b3a,#0d7a77)}
+#login{background:radial-gradient(circle at 20% 20%,var(--p2) 0,transparent 45%),linear-gradient(135deg,var(--pdd),var(--p))}
 .lbox{border-radius:22px;padding:30px 26px;box-shadow:0 24px 60px rgba(0,0,0,.28)}
 .lbox input{font-size:16px;padding:11px 12px}
 .note,.robadge{border-radius:12px}
@@ -237,10 +237,81 @@ tr:hover td{background:#f8fbfb}
 .toast{z-index:100}
 .ferr{grid-column:1/-1;color:var(--bad);font-weight:600;min-height:18px}
 @media(max-width:900px){.tw td{flex-wrap:wrap}.tw td>*{max-width:100%}.bdg{white-space:normal}}
+
+/* ===== اتجاه الصفحة (LTR للإنجليزي) ===== */
+.af nav a{border-right:0;border-inline-start:3px solid transparent}.af nav a.on{border-inline-start-color:var(--p)}
+.hist{border-right:0;border-inline-start:3px solid var(--p)}
+.cal .d{border-left:0;border-inline-end:1px solid var(--bd)}
+th,td{text-align:start}
+.usr{text-align:start}
+[dir=ltr] .st .dot{right:auto;left:50%;transform:translateX(-50%)}
+[dir=ltr] .tile .cnt{left:auto;right:10px}
+[dir=ltr] .flt>.btn,[dir=ltr] h2{direction:ltr}
+@media(max-width:900px){
+ [dir=ltr] aside{right:auto;left:0;border-radius:0 18px 18px 0;transform:translateX(-110%)}
+ [dir=ltr] body.nav-open aside{transform:none}
+ [dir=ltr] .tw td{text-align:right}[dir=ltr] .tw td:before{text-align:left}
+ .uact .uk,.uact .uo,.uact .uth{display:none}
+}
+/* ===== أزرار الهيدر ===== */
+.uact a b{font-size:12px;font-weight:700}
+.av{cursor:pointer}
+/* ===== نافذة المظهر ===== */
+.apx{display:flex;flex-direction:column;gap:8px}
+.apuser{display:flex;align-items:center;gap:12px;padding:4px 0 10px;border-bottom:1px solid var(--bd);margin-bottom:4px}
+.apuser small{display:block;color:var(--mu)}
+.av.big{background:var(--p);color:#fff;border:0;width:46px;height:46px;font-size:18px}
+.aplbl{font-weight:600;font-size:12.5px;color:var(--mu);margin-top:6px}
+.seg{display:flex;background:var(--bg);border:1px solid var(--bd);border-radius:11px;padding:3px;gap:3px}
+.seg button{flex:1;border:0;background:transparent;color:var(--tx);padding:9px;border-radius:9px;font-family:inherit;font-size:14px;cursor:pointer;display:flex;gap:6px;align-items:center;justify-content:center}
+.seg button.on{background:var(--p);color:#fff;font-weight:600;box-shadow:0 2px 8px rgba(var(--pa),.3)}
+.seg i.fa{width:16px;height:16px}
+.sw{display:flex;flex-wrap:wrap;gap:10px}
+.sw button,.swc{width:36px;height:36px;border-radius:50%;border:3px solid transparent;cursor:pointer;box-shadow:0 0 0 1px var(--bd);position:relative;display:grid;place-items:center}
+.sw button.on{border-color:var(--card,#fff);box-shadow:0 0 0 2px var(--tx)}
+.swc input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.swc i.fa{width:16px;height:16px;color:#fff;pointer-events:none}
+.apact{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.aphint{color:var(--mu);font-size:12px;margin:4px 0}
+.aplinks{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--bd);padding-top:12px;margin-top:4px}
+.aplinks .btn{flex:1;justify-content:center}
+.lbtools{display:flex;justify-content:space-between;gap:8px;margin:-10px -6px 0}
+.lbtools a{cursor:pointer;color:var(--mu);font-size:12.5px;display:flex;gap:5px;align-items:center;padding:4px 8px;border-radius:8px}
+.lbtools a:hover{background:var(--pl)}
+.lbtools i.fa{width:16px;height:16px}
+.btn.sm{padding:6px 12px;font-size:12.5px}
+/* ===== الوضع الداكن ===== */
+[data-theme=dark]{--bg:#0d1514;--tx:#e2eceb;--mu:#93a6a4;--bd:#253736;--card:#14201f;--ok:#3ccf8e;--warn:#e6b450;--bad:#f0776a;color-scheme:dark}
+[data-theme=dark] body{background:var(--bg);color:var(--tx)}
+[data-theme=dark] .card,[data-theme=dark] aside,[data-theme=dark] .kpi,[data-theme=dark] .modal .box,[data-theme=dark] .modal .mh,[data-theme=dark] .lbox,[data-theme=dark] .cal .d,[data-theme=dark] .ic,[data-theme=dark] .st .dot{background:var(--card);color:var(--tx)}
+[data-theme=dark] .card{box-shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.25)}
+[data-theme=dark] .flt,[data-theme=dark] .mv,[data-theme=dark] .modal .mf,[data-theme=dark] .hist,[data-theme=dark] .seg{background:#101a19;border-color:var(--bd)}
+[data-theme=dark] input,[data-theme=dark] select,[data-theme=dark] textarea{background:#0f1817;color:var(--tx);border-color:#2a3f3e}
+[data-theme=dark] input:disabled,[data-theme=dark] select:disabled,[data-theme=dark] textarea:disabled{background:#121d1c;color:var(--mu)}
+[data-theme=dark] td{border-bottom-color:#1f2f2e}
+[data-theme=dark] tr:hover td{background:#182625}
+[data-theme=dark] .tw{border-color:var(--bd)}
+[data-theme=dark] .btn.l{background:transparent;color:var(--p);border-color:var(--p)}
+[data-theme=dark] .ic{color:var(--p);border-color:#2a3f3e}
+[data-theme=dark] aside a{color:var(--tx)}[data-theme=dark] aside a.on{color:#fff}
+[data-theme=dark] aside .sec,[data-theme=dark] .kpi span{color:var(--mu)}
+[data-theme=dark] a{color:var(--p)}
+[data-theme=dark] .note,[data-theme=dark] .robadge{background:#2a2410;border-color:#594a1c;color:#f0d48a}
+[data-theme=dark] .card.emg{background:#2a1714;border-color:#5b2a25}
+[data-theme=dark] .modal{background:rgba(0,0,0,.6)}
+[data-theme=dark] .tile .cnt{background:#e9f6f5}
+[data-theme=dark] .bdg{filter:saturate(.9) brightness(.92)}
+[data-theme=dark] .empty{color:var(--mu)}
+[data-theme=dark] .cal{background:var(--bd)}
+@media(max-width:900px){[data-theme=dark] .tw tr{background:var(--card);border-color:var(--bd)}}
+
+[data-theme=dark] header a,[data-theme=dark] .uact a,[data-theme=dark] .bc a{color:#fff}
+[data-theme=dark] .af nav a.on,[data-theme=dark] .st.cur,[data-theme=dark] aside a:hover{color:var(--pt)}
+[data-theme=dark] .modal .mh a{color:var(--mu)!important}
 </style>
 </head>
 <body class="locked">
-<div id="login"><div class="lbox"><div class="mk">NQ</div><h1>إدارة الشهادات والمراجعات</h1><small>الجودة الوطنية — تسجيل الدخول</small>
+<div id="login"><div class="lbox"><div class="lbtools"><a onclick="toggleLang()"><i class="fa fa-globe"></i><span class="lgl">English</span></a><a onclick="appearance()"><i class="fa fa-palette"></i><span>المظهر</span></a></div><div class="mk">NQ</div><h1>إدارة الشهادات والمراجعات</h1><small>الجودة الوطنية — تسجيل الدخول</small>
  <div class="fld"><label>اسم المستخدم</label><input id="l_u" dir="ltr" autocomplete="username" onkeydown="if(event.key=='Enter')$('#l_p').focus()"></div>
  <div class="fld"><label>كلمة المرور</label><input id="l_p" type="password" dir="ltr" autocomplete="current-password" onkeydown="if(event.key=='Enter')doLogin()"></div>
  <div id="l_err"></div><button class="btn" onclick="doLogin()">دخول</button></div></div>
@@ -248,7 +319,7 @@ tr:hover td{background:#f8fbfb}
   <div class="hd">
     <div class="hgrp"><button id="menuBtn" onclick="document.body.classList.toggle('nav-open')" aria-label="القائمة"><i class="fa fa-bars"></i></button><div class="logo"><div class="mk">NQ</div><div><b>الجودة الوطنية لتقنية المعلومات</b><small>NQ ERP</small></div></div></div>
     <div class="ttl"><h1>إدارة الشهادات والمراجعات</h1><small>Certificate & Audit Management</small></div>
-    <div class="usr"><div class="av" id="uAv">؟</div><div class="unm"><b id="uName"></b><span id="sync"></span></div><div class="uact"><a onclick="go('password')" title="تغيير كلمة المرور"><i class="fa fa-key"></i><span>كلمة المرور</span></a><a onclick="logout()" title="تسجيل خروج"><i class="fa fa-right-from-bracket"></i><span>خروج</span></a></div></div>
+    <div class="usr"><div class="av" id="uAv" onclick="appearance()" title="المظهر">؟</div><div class="unm"><b id="uName"></b><span id="sync"></span></div><div class="uact"><a onclick="toggleLang()" title="English / العربية"><b id="langLbl">EN</b></a><a id="thBtn" class="uth" onclick="toggleTheme()" title="الوضع"><i class="fa fa-moon"></i></a><a onclick="appearance()" title="المظهر"><i class="fa fa-palette"></i></a><a class="uk" onclick="go('password')" title="تغيير كلمة المرور"><i class="fa fa-key"></i><span>كلمة المرور</span></a><a class="uo" onclick="logout()" title="تسجيل خروج"><i class="fa fa-right-from-bracket"></i><span>خروج</span></a></div></div>
   </div>
   <div class="bc"><div id="bc"></div></div>
   <div id="emgbar"></div>
@@ -407,9 +478,9 @@ V.home=()=>{bc([]);
  <div class="kpis">
   <div class="kpi"><span>مراجعات مفتوحة</span><b>${act.length}</b></div>
   <div class="kpi"><span>مراجعات هذا الأسبوع</span><b>${db.audits.filter(a=>{const d=(new Date(a.date)-today)/864e5;return d>=0&&d<7}).length}</b></div>
-  <div class="kpi" style="border-right-color:var(--ok)"><span>شهادات سارية</span><b>${counts("certificates")}</b></div>
-  <div class="kpi" style="border-right-color:var(--warn)"><span>شهادات تنتهي خلال 90 يوم</span><b>${exp.length}</b></div>
-  <div class="kpi" style="border-right-color:var(--bad)"><span>استفسارات بلا رد</span><b>${db.queries.filter(q=>!q.ans).length}</b></div>
+  <div class="kpi" style="--kc:var(--ok)"><span>شهادات سارية</span><b>${counts("certificates")}</b></div>
+  <div class="kpi" style="--kc:var(--warn)"><span>شهادات تنتهي خلال 90 يوم</span><b>${exp.length}</b></div>
+  <div class="kpi" style="--kc:var(--bad)"><span>استفسارات بلا رد</span><b>${db.queries.filter(q=>!q.ans).length}</b></div>
  </div>
  <div class="card"><h2><i class="fa fa-table-cells-large"></i> الشاشات</h2><div class="tiles">${TILES.filter(k=>canView(k)).map(k=>{const m=MENU.find(x=>x.k==k),c=counts(k);return `<div class="tile" onclick="go('${k}')">${c!=null?`<span class="cnt">${c}</span>`:""}<i class="fa ${m.i}"></i><b>${m.t}</b></div>`}).join("")}</div></div>
  <div class="card"><h2><i class="fa fa-clock"></i> المراجعات القادمة</h2>${auditTable(act.filter(a=>new Date(a.date)>=today).sort((a,b)=>a.date.localeCompare(b.date)).slice(0,5))}</div>`};
@@ -536,7 +607,7 @@ V.calendar=()=>{const y=calM.getFullYear(),m=calM.getMonth();const first=new Dat
   cells+=`<div class="d ${d.getMonth()!=m?"o":""} ${ds==TODAY()?"t":""}"><div class="n">${d.getDate()}</div>${evs.map(a=>`<span class="ev ${a.status=="تم الإنشاء"?"t3":a.status=="تم التنسيق"?"":"t2"}" title="${comp(a.comp).name} — ${a.type}" onclick="go('audit',${a.id})">${comp(a.comp).trade} (${a.id})</span>`).join("")}</div>`}
  $("#main").innerHTML=`<div class="card"><h2><i class="fa fa-calendar-days"></i> تقويم المراجعات <small>Audits Calendar</small></h2>
  <div class="flt"><button class="btn l sm nav" onclick="calM=new Date(calM.getFullYear(),calM.getMonth()-1,1);V.calendar()"><i class="fa fa-chevron-right"></i></button>
- <b style="font-size:15px;min-width:130px;text-align:center">${calM.toLocaleDateString("ar-EG",{month:"long",year:"numeric"})}</b>
+ <b style="font-size:15px;min-width:130px;text-align:center">${calM.toLocaleDateString(typeof LANG!="undefined"&&LANG=="en"?"en-US":"ar-EG",{month:"long",year:"numeric"})}</b>
  <button class="btn l sm nav" onclick="calM=new Date(calM.getFullYear(),calM.getMonth()+1,1);V.calendar()"><i class="fa fa-chevron-left"></i></button>
  <button class="btn sm nav" onclick="calM=new Date(new Date().getFullYear(),new Date().getMonth(),1);V.calendar()">اليوم</button>
  <div class="fld"><label>المعيار</label><select onchange="window._calStd=this.value;V.calendar()">${opts(db.standards.map(s=>({v:s.id,t:s.code})),window._calStd,1)}</select></div>
@@ -548,8 +619,8 @@ V.indicators=(gen)=>{const f=window._if||{from:dShift(-90),to:dShift(90),std:"",
  let res="";if(gen){const rows=db.audits.filter(a=>a.date>=f.from&&a.date<=f.to&&(!f.std||a.std==f.std)&&(!f.type||a.type==f.type));
   const by=k=>{const o={};rows.forEach(r=>{const key=k(r);o[key]=(o[key]||0)+1});return o};
   const bars=o=>{const mx=Math.max(1,...Object.values(o));return `<div class="bars">${Object.entries(o).sort((a,b)=>b[1]-a[1]).map(([k,n])=>`<div class="bar"><span>${k}</span><div style="width:${n/mx*60}%"></div><b>${n}</b></div>`).join("")}</div>`};
-  res=`<div class="kpis"><div class="kpi"><span>إجمالي المراجعات</span><b>${rows.length}</b></div><div class="kpi" style="border-right-color:var(--ok)"><span>مكتملة</span><b>${rows.filter(r=>r.status==DONE()).length}</b></div>
-  <div class="kpi" style="border-right-color:var(--bad)"><span>ملغاة</span><b>${rows.filter(r=>r.status=="ملغاة").length}</b></div><div class="kpi" style="border-right-color:var(--info)"><span>عن بُعد / هجين</span><b>${rows.filter(r=>r.remote).length}</b></div></div>
+  res=`<div class="kpis"><div class="kpi"><span>إجمالي المراجعات</span><b>${rows.length}</b></div><div class="kpi" style="--kc:var(--ok)"><span>مكتملة</span><b>${rows.filter(r=>r.status==DONE()).length}</b></div>
+  <div class="kpi" style="--kc:var(--bad)"><span>ملغاة</span><b>${rows.filter(r=>r.status=="ملغاة").length}</b></div><div class="kpi" style="--kc:var(--info)"><span>عن بُعد / هجين</span><b>${rows.filter(r=>r.remote).length}</b></div></div>
   <div class="grid2"><div class="card"><h2 style="font-size:14px">حسب الحالة</h2>${bars(by(r=>r.status))}</div><div class="card"><h2 style="font-size:14px">حسب المعيار</h2>${bars(by(r=>std(r.std).code))}</div>
   <div class="card"><h2 style="font-size:14px">حسب المراجع الرئيسي</h2>${bars(by(r=>aud(r.lead).name))}</div><div class="card"><h2 style="font-size:14px">حسب الدولة</h2>${bars(by(r=>comp(r.comp).country))}</div></div>`}
  $("#main").innerHTML=`<div class="card"><h2><i class="fa fa-chart-pie"></i> المؤشرات <small>Indicators</small></h2>
@@ -631,9 +702,9 @@ V.company=(id)=>{_re=()=>V.company(id);const isNew=!id;const c=isNew?{country:"�
  $("#main").innerHTML=`<div class="card"><h2 style="justify-content:space-between"><span><i class="fa fa-building"></i> ${isNew?"تعريف شركة جديدة":c.name} ${isNew?"":`<small>${v(c.trade)} — ${c.country}</small>`}</span>
   ${isNew?"":`<span style="display:flex;gap:6px"><button class="btn sm" onclick="certTab='data';go('cert','new:${id}')"><i class="fa fa-certificate"></i> شهادة جديدة</button><button class="btn sm l" onclick="auditNew(${id})"><i class="fa fa-clipboard-check"></i> مراجعة جديدة</button></span>`}</h2>
   ${isNew?"":`<div class="kpis"><div class="kpi"><span>شهادات سارية</span><b>${certs.filter(x=>x.status=="ساري").length}</b></div>
-  <div class="kpi" style="border-right-color:var(--info)"><span>المراجعة القادمة</span><b style="font-size:15px">${nextAud?`${nextAud.date} — ${nextAud.type}`:"—"}</b></div>
-  <div class="kpi" style="border-right-color:var(--warn)"><span>أقرب انتهاء شهادة</span><b style="font-size:15px">${v(certs.filter(x=>x.exp&&x.status=="ساري").map(x=>x.exp).sort()[0])}</b></div>
-  <div class="kpi" style="border-right-color:var(--bad)"><span>مستحق للفوترة</span><b style="font-size:15px">${fmt(db.invoices.filter(x=>x.comp==id&&x.status!="تم إصدار الفاتورة").reduce((s,x)=>s+x.amount,0))}</b></div></div>`}
+  <div class="kpi" style="--kc:var(--info)"><span>المراجعة القادمة</span><b style="font-size:15px">${nextAud?`${nextAud.date} — ${nextAud.type}`:"—"}</b></div>
+  <div class="kpi" style="--kc:var(--warn)"><span>أقرب انتهاء شهادة</span><b style="font-size:15px">${v(certs.filter(x=>x.exp&&x.status=="ساري").map(x=>x.exp).sort()[0])}</b></div>
+  <div class="kpi" style="--kc:var(--bad)"><span>مستحق للفوترة</span><b style="font-size:15px">${fmt(db.invoices.filter(x=>x.comp==id&&x.status!="تم إصدار الفاتورة").reduce((s,x)=>s+x.amount,0))}</b></div></div>`}
   <div class="af"><nav>${tabs.map(t=>`<a class="${compTab==t[0]?"on":""}" style="${isNew&&t[0]!="info"?"opacity:.4;pointer-events:none":""}" onclick="compTab='${t[0]}';V.company(${id})"><i class="fa ${t[2]}"></i> ${t[1]}${t[3]}</a>`).join("")}
   ${isNew?`<div style="font-size:11px;color:var(--mu);padding:8px">احفظ البيانات الأساسية أولًا لتفعيل باقي التبويبات</div>`:""}</nav><div class="body" id="cb"></div></div></div>`;
  const b=$("#cb");
@@ -903,7 +974,7 @@ async function loadAll(){const r=await api("GET","/api/state");if(!r.ok)return f
  SYNC={};applyItems(items);
  if(!items.standards&&isFullAdmin(ME)){ // أول تشغيل: نبدأ بنظام نظيف (المعايير والإعدادات فقط)
   BUSINESS.forEach(k=>db[k]=[]);db.history={};db.expenses={};db.team={};usedNos.clear()}
- else stateKeys().forEach(k=>{if(!items[k]&&k!="lists"&&k!="usedNos"&&db[k]!==undefined&&!SYNC[k])db[k]=Array.isArray(db[k])?[]:(typeof db[k]=="object"?(k=="numbering"?db[k]:{}):db[k])});
+ else stateKeys().forEach(k=>{if(!items[k]&&k!="lists"&&k!="usedNos"&&db[k]!==undefined&&!SYNC[k]){if(k!="numbering")db[k]=Array.isArray(db[k])?[]:(typeof db[k]=="object"?{}:db[k]);SYNC[k]={v:0,s:JSON.stringify(getKey(k))}}});
  return true}
 function saveSoon(){clearTimeout(_saveT);_saveT=setTimeout(pushChanges,500)}
 async function pushChanges(){if(!ME)return;if(_busy){_again=true;return}const ch=pendingChanges();if(!ch.length){syncState("ok");return}
@@ -1085,6 +1156,96 @@ Object.assign(ICONS,{bars:'<path d="M4 7h16M4 12h16M4 17h16"/>','right-from-brac
 database:'<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>',
 download:'<path d="M12 4v12M7 11l5 5 5-5M4 17v3h16v-3"/>',
 'user-lock':'<circle cx="9" cy="7" r="4"/><path d="M2 21c0-4 3-7 7-7 1.5 0 2.8.4 4 1"/><rect x="15" y="15" width="7" height="6" rx="1"/><path d="M16.5 15v-2a2 2 0 0 1 4 0v2"/>'});
+
+
+/* ===================== اللغة (عربي / English) والمظهر (فاتح / داكن / الألوان) ===================== */
+const I18N={"من": "From", "رد": "Reply", "نشط": "Active", "قطر": "Qatar", "حدث": "Event", "حفظ": "Save", "ر.س": "SAR", "جدة": "Jeddah", "آخر": "Last", "عقد": "Contract", "رفع": "Upload", "فشل": "Failed", "حذف": "Delete", "مصر": "Egypt", "سجل": "Log", "إلى": "To", "عرض": "View", "شخص": "Person", "ملغي": "Cancelled", "دخول": "Sign in", "نظام": "System", "ساري": "Valid", "أخرى": "Other", "رجوع": "Back", "الرد": "Reply", "أدخل": "Enter", "خروج": "Sign out", "هوية": "ID", "عمان": "Oman", "مدرب": "Trainer", "منتج": "Product", "مشرف": "Supervisor", "الكل": "All", "خدمة": "Service", "إنجاز": "Done", "البند": "Item", "منتهي": "Expired", "اليوم": "Today", "السبت": "Sat", "شهادة": "Certificate", "إلغاء": "Cancel", "عالية": "High", "العين": "Al Ain", "القسم": "Section", "عمّان": "Amman", "النوع": "Type", "الدور": "Role", "الملف": "File", "خانات": "digits", "الدول": "Countries", "الحدث": "Event", "منسقة": "Coordinated", "الأحد": "Sun", "السنة": "Year", "الاسم": "Name", "السعر": "Price", "زراعة": "Agriculture", "جديدة": "New", "الفئة": "Category", "الرمز": "Code", "موقوف": "Suspended", "مراقب": "Observer", "(عرض)": "(view)", "داخلي": "Internal", "تعديل": "Edit", "مراجع": "Auditor", "إضافة": "Add", "تجديد": "Recertification", "منفذة": "Completed", "محاسب": "Accountant", "تقرير": "Report", "ملغاة": "Cancelled", "مطابق": "Conforming", "الجهة": "Organization", "المبلغ": "Amount", "تنبيه:": "Note:", "المبرر": "Justification", "الدولة": "Country", "الرياض": "Riyadh", "الموقع": "Site", "الأردن": "Jordan", "بواسطة": "By", "المدرب": "Trainer", "المهمة": "Task", "ملاحظة": "Observation", "الكويت": "Kuwait", "منخفضة": "Low", "البريد": "Email", "منتجات": "Products", "الأيام": "Days", "تفاصيل": "Details", "معاينة": "Preview", "الشاشة": "Screen", "مستخدم": "User", "مجدولة": "Scheduled", "إضافة:": "Add:", "شهادات": "Certificates", "النظام": "System", "الفئات": "Categories", "الدمام": "Dammam", "الخميس": "Thu", "الجوال": "Mobile", "الشركة": "Company", "الهاتف": "Phone", "المهام": "Tasks", "الدورة": "Course", "الحالة": "Status", "الجمعة": "Fri", "النطاق": "Scope", "متوسطة": "Medium", "مكتملة": "Completed", "الأدوار": "Roles", "الموضوع": "Subject", "إجراءات": "Actions", "المدينة": "City", "المالية": "Finance", "العائلة": "Family", "الإصدار": "Issue", "القائمة": "Menu", "المعيار": "Standard", "الفوترة": "Invoicing", "الترتيب": "Order", "استشاري": "Consultant", "الاثنين": "Mon", "لا يوجد": "None", "البحرين": "Bahrain", "الشاشات": "Screens", "المستند": "Document", "ملاحظات": "Notes", "الوظيفة": "Job title", "تعليقات": "Comments", "المسؤول": "Owner", "● محفوظ": "● Saved", "الدورات": "Courses", "الشهادة": "Certificate", "العنوان": "Title", "التعليم": "Education", "التصنيف": "Classification", "التاريخ": "Date", "التدريب": "Training", "غير نشط": "Inactive", "النتيجة": "Result", "المراجع": "Auditor", "الشركات": "Companies", "المواقع": "Sites", "السعودية": "Saudi Arabia", "خط الطول": "Longitude", "الانتهاء": "Expiry", "من تاريخ": "From date", "المؤشرات": "Indicators", "الموظفون": "Employees", "الشهادات": "Certificates", "خط العرض": "Latitude", "تم الحفظ": "Saved", "مراقبة 2": "Surveillance 2", "مراقبة 1": "Surveillance 1", "تم الحذف": "Deleted", "النطاقات": "Scopes", "خبير فني": "Technical expert", "المعايير": "Standards", "الأربعاء": "Wed", "الفواتير": "Invoices", "الرئيسية": "Home", "الإمارات": "UAE", "آخر دخول": "Last sign-in", "الأولوية": "Priority", "المستخدم": "User", "المراجعة": "Audit", "— بدون —": "— None —", "الثلاثاء": "Tue", "فتح الملف": "Open file", "الاستحقاق": "Due", "المرحلة 1": "Stage 1", "تقييم فني": "Technical review", "إضافة دور": "Add role", "تعديل دور": "Edit role", "(اختياري)": "(optional)", "المعيار *": "Standard *", "إلى تاريخ": "To date", "الصلاحيات": "Permissions", "مستخدم في": "used in", "المصروفات": "Expenses", "مشاهد فقط": "Viewer only", "المتدربون": "Trainees", "المراجعون": "Auditors", "نمط الرقم": "Number pattern", "الإجمالي:": "Total:", "الإعدادات": "Settings", "مدير نظام": "System admin", "اكتب الرد": "Write the reply", "المراجعات": "Audits", "اسم الملف": "File name", "تعهد سرية": "Confidentiality pledge", "حذف الدور": "Delete role", "سجل تجاري": "Commercial register", "المستندات": "Documents", "خطة مراجعة": "Audit plan", "مدقق داخلي": "Internal auditor", "حسب الدولة": "By country", "رمز الدولة": "Country code", "● غير متصل": "● Offline", "هاتف العمل": "Work phone", "إضافة شركة": "Add company", "تم الإنشاء": "Created", "تعديل شركة": "Edit company", "شركة جديدة": "New company", "حفظ وتشغيل": "Save & start", "مثال للرقم": "Number example", "وصف النطاق": "Scope description", "تسجيل خروج": "Sign out", "حسب الحالة": "By status", "سجل النشاط": "Activity log", "ملف الشركة": "Company file", "مراجع جديد": "New auditor", "دخول طوارئ": "Emergency sign-in", "إضافة جديد": "Add new", "المستخدمون": "Users", "تم التنسيق": "Coordinated", "اكتب الاسم": "Type the name", "الإحداثيات": "Coordinates", "سيرة ذاتية": "CV", "تسجيل دخول": "Sign in", "رمز القطاع": "Sector code", "خبرة عملية": "Work experience", "عدد الأعضاء": "Members", "تعذّر الحذف": "Could not delete", "لا يوجد سجل": "No records", "حسب المعيار": "By standard", "قيد الإصدار": "Being issued", "كلمة المرور": "Password", "مراجعة فنية": "Technical review", "فشل الإعداد": "Setup failed", "دور المراجع": "Auditor role", "نوع المستند": "Document type", "مدير النظام": "System administrator", "نوع الشهادة": "Certificate type", "تعديل معيار": "Edit standard", "شهادة تدريب": "Training certificate", "تذكرة طيران": "Flight ticket", "رقم الشهادة": "Certificate No.", "مراجع رئيسي": "Lead auditor", "الاسم موجود": "Name already exists", "السنة رقمين": "Year (2 digits)", "ملف الشهادة": "Certificate file", "جارِ الحفظ…": "Saving…", "شهادة جديدة": "New certificate", "تمت الإضافة": "Added", "فئة المراجع": "Auditor category", "بدون اعتماد": "Not accredited", "الاسم مطلوب": "Name is required", "جهة الإصدار": "Issuer", "اسم العائلة": "Last name", "مراجع متدرب": "Trainee auditor", "الاسم الأول": "First name", "ملف المراجع": "Auditor file", "بريد الشركة": "Company email", "إضافة مراجع": "Add auditor", "صفحة 1 من 1": "Page 1 of 1", "مدير الجودة": "Quality manager", "صناعة الورق": "Paper industry", "أدخل المبلغ": "Enter amount", "إضافة معيار": "Add standard", "اسم المستند": "Document name", "سجل الحالات": "Status history", "عدد الدورات": "Courses", "إرفاق مستند": "Attach document", "الاستفسارات": "Inquiries", "تاريخ الرفع": "Upload date", "اسم الدور *": "Role name *", "قوائم الفحص": "Checklists", "تعذّر الحفظ": "Could not save", "تعديل مراجع": "Edit auditor", "عرض التقرير": "Show report", "الاستثناءات": "Exclusions", "عدد الساعات": "Hours", "إضافة شهادة": "Add certificate", "النشطون فقط": "Active only", "الرمز مطلوب": "Code is required", "غيّرها الآن": "Change it now", "دليل الجودة": "Quality manual", "فرق المراجعة": "Audit teams", "سلامة الغذاء": "Food safety", "نطاق المراجع": "Auditor scope", "تقرير مراجعة": "Audit report", "شهادات سارية": "Valid certificates", "جهات الإصدار": "Issuers", "شهادة ضريبية": "Tax certificate", "إضافة مستخدم": "Add user", "دورة تدريبية": "Training course", "تم حفظ الدور": "Role saved", "＋ إضافة جديد": "＋ Add new", "جهة الاعتماد": "Accreditation body", "كل الصلاحيات": "All permissions", "تم الاستيراد": "Imported", "مؤهل أكاديمي": "Academic qualification", "جهات الاتصال": "Contacts", "مقفول مؤقتًا": "Temporarily locked", "بحث عن مراجع": "Search auditors", "رقم الشهادة:": "Certificate No.:", "مراجعة جديدة": "New audit", "جارِ الدخول…": "Signing in…", "تعذّر الدخول": "Could not sign in", "إقامة فندقية": "Hotel stay", "حفظ البيانات": "Save data", "نوع المراجعة": "Audit type", "مدير الطوارئ": "Emergency admin", "حذف المستخدم": "Delete user", "تمت المراجعة": "Audited", "المبلغ (ر.س)": "Amount (SAR)", "تغيير الحالة": "Change status", "إنشاء مراجعة": "Create audit", "عدد السجلات:": "Records:", "عدد الموظفين": "Employees", "إصدار فاتورة": "Issue invoice", "بانتظار الرد": "Awaiting reply", "موجود بالفعل": "already exists", "الاسم الكامل": "Full name", "توسيع النطاق": "Scope extension", "اسم الشركة *": "Company name *", "قيد المراجعة": "Under review", "مركز الإمداد": "Supply center", "شهادات تغطيه": "Covering certificates", "اسم المستخدم": "Username", "رقم المراجعة": "Audit No.", "تعديل مستخدم": "Edit user", "تاريخ الإصدار": "Issue date", "خطة المراجعات": "Audit plan", "● جارِ الحفظ…": "● Saving…", "مراجعة إدارية": "Management review", "مستند المراجع": "Auditor document", "الاسم التجاري": "Trade name", "مسؤول التواصل": "Contact person", "النطاق (عربي)": "Scope (Arabic)", "أوامر الفوترة": "Invoice orders", "فشل الاستيراد": "Import failed", "تعذّر التغيير": "Could not change", "السنة 4 أرقام": "Year (4 digits)", "أساسيات HACCP": "HACCP basics", "جارِ التحميل…": "Loading…", "رقم الشهادة *": "Certificate No. *", "أيام المراجعة": "Audit days", "المتبقي (يوم)": "Remaining (days)", "لا توجد أحداث": "No events", "طباعة الشهادة": "Print certificate", "إصدار الشهادة": "Certificate issuance", "أدوات الطوارئ": "Emergency tools", "خطط المراجعات": "Audit plans", "الرقم الضريبي": "VAT number", "تعذّر التصدير": "Could not export", "لا توجد مواقع": "No sites", "شهادة المراجع": "Auditor certificate", "حالة المراجعة": "Audit status", "مراجعة اللجنة": "Committee review", "مستخدم للنظام": "System user", "مراجعة داخلية": "Internal audit", "＋ إضافة مراجع": "＋ Add auditor", "السجل التجاري": "Commercial register", "تاريخ النهاية": "End date", "بادئة المعيار": "Standard prefix", "رقم لكل بادئة": "numbers per prefix", "تم إرسال الرد": "Reply sent", "تاريخ البداية": "Start date", "مستحق للفوترة": "Due for invoicing", "أنظمة الإدارة": "Management systems", "ملف المراجع —": "Auditor file —", "جهات الاعتماد": "Accreditation bodies", "فريق المراجعة": "Audit team", "توليد رقم آخر": "Generate another number", "المهام المعلقة": "Pending tasks", "أدخل اسم الدور": "Enter the role name", "السيرة الذاتية": "CV", "مراجعات مفتوحة": "Open audits", "فئات المراجعين": "Auditor categories", "دورات المعايرة": "Calibration courses", "تاريخ الانتهاء": "Expiry date", "لا توجد شهادات": "No certificates", "تعديل المستخدم": "Edit user", "من خطة الشهادة": "From the certificate plan", "حالات المراجعة": "Audit statuses", "تم حفظ الشهادة": "Certificate saved", "لا توجد نطاقات": "No scopes", "مراجع / متعاون": "Auditor / collaborator", "طباعة الشهادات": "Print certificates", "تم رفع المستند": "Document uploaded", "مراجعة الإدارة": "Management review", "تقييم الموردين": "Supplier evaluation", "ترقيم الشهادات": "Certificate numbering", "أضف شركة أولًا": "Add a company first", "أرقام الشهادات": "Certificate numbers", "الملف غير صالح": "Invalid file", "التاريخ المخطط": "Planned date", "زيارة - استلام": "Visit - handover", "جهة إصدار أخرى": "Other issuer", "الفئة الرئيسية": "Main category", "تم رفع التقرير": "Report uploaded", "لا توجد بيانات": "No data", "رجوع للإعدادات": "Back to settings", "بيانات الشهادة": "Certificate data", "إضافة المستخدم": "Add user", "المصنع الرئيسي": "Main factory", "لا توجد فواتير": "No invoices", "الجودة الوطنية": "National Quality", "عن بُعد / هجين": "Remote / hybrid", "الموقع / الفرع": "Site / branch", "الخبرات العملية": "Work experience", "المراجع المرتبط": "Linked auditor", "أنواع المراجعات": "Audit types", "تاريخ آخر إصدار": "Last issue date", "ليس لديك صلاحية": "You don't have permission", "موضوع الاستفسار": "Inquiry subject", "لا توجد مصروفات": "No expenses", "(مع المستخدمين)": "(including users)", "لا توجد مراجعات": "No audits", "الدورات المنفذة": "Delivered courses", "تم حذف المستخدم": "User deleted", "تم مسح البيانات": "Data cleared", "المراجع الرئيسي": "Lead auditor", "عدد الاحتمالات:": "Possible combinations:", "تم حفظ المراجعة": "Audit saved", "بيانات المراجعة": "Audit data", "تقويم المراجعات": "Audit calendar", "القطاع / النشاط": "Sector / activity", "قوائم الإعدادات": "Settings lists", "لا توجد مستندات": "No documents", "تم تحديث المبلغ": "Amount updated", "عن بُعد أو هجين": "Remote or hybrid", "تم حفظ المستخدم": "User saved", "الدور غير موجود": "Role not found", "النسخ الاحتياطي": "Backup", "المواقع والفروع": "Sites & branches", "تم إنجاز المهمة": "Task completed", "بانتظار الفوترة": "Awaiting invoicing", "ملفات المراجعين": "Auditor files", "الحالة الحالية:": "Current status:", "إجراءات تصحيحية": "Corrective actions", "إجراء غير معروف": "Unknown action", "العودة للمراجعين": "Back to auditors", "تم تغيير الترتيب": "Order changed", "إعادة ضبط المصنع": "Factory reset", "مراجعة غير معلنة": "Unannounced audit", "المراجعة القادمة": "Next audit", "النطاق (English)": "Scope (English)", "ملاحظات المراجعة": "Audit notes", "اسم الشركة مطلوب": "Company name is required", "وقّع تعهد السرية": "Signed confidentiality pledge", "استفسارات بلا رد": "Unanswered inquiries", "إجمالي المراجعات": "Total audits", "تعريف شركة جديدة": "New company", "تمت إزالة الموقع": "Site removed", "التكوين والتدريب": "Education & training", "المواقع المشمولة": "Covered sites", "المعايرة والقياس": "Calibration & measurement", "مراجعاتي المعلقة": "My pending audits", "الرد على استفسار": "Reply to inquiry", "مراجعة استثنائية": "Special audit", "أدخل اسم المراجع": "Enter the auditor name", "أدخل كلمة المرور": "Enter the password", "محاولة دخول فاشلة": "Failed sign-in attempt", "أضف معيارًا أولًا": "Add a standard first", "المراجعة الداخلية": "Internal audit", "شهادة - المرحلة 2": "Certification - Stage 2", "تم إنشاء المراجعة": "Audit created", "المراجعات المنسقة": "Coordinated audits", "تم إصدار الفاتورة": "Invoice issued", "تم توليد رقم جديد": "New number generated", "مراجعات شارك فيها": "Audits participated in", "عدم مطابقة رئيسية": "Major nonconformity", "الموقع الإلكتروني": "Website", "مدير سلامة الغذاء": "Food safety manager", "أقرب انتهاء شهادة": "Nearest certificate expiry", "لحساب الطوارئ فقط": "Emergency account only", "أدخل اسم المستخدم": "Enter the username", "البريد الإلكتروني": "Email", "تغيير كلمة المرور": "Change password", "المراجعات القادمة": "Upcoming audits", "الشركات (العملاء)": "Companies (clients)", "البيانات الأساسية": "Master data", "تأكيد كلمة المرور": "Confirm password", "ملاحظتان ثانويتان": "Two minor observations", "لا توجد استفسارات": "No inquiries", "التأكيد غير مطابق": "Confirmation does not match", "نظام إدارة الجودة": "Quality management system", "لا توجد سجلات بعد": "No records yet", "تأجيل بطلب العميل": "Postponed at client request", "عدم مطابقة ثانوية": "Minor nonconformity", "رقم الشهادة مطلوب": "Certificate number is required", "النظام مُعد بالفعل": "The system is already set up", "بيانات غير معروفة:": "Unknown data:", "دور أساسي لا يُعدل": "Built-in role (locked)", "نوع الجزء العشوائي": "Random part type", "اسم الموقع / الفرع": "Site / branch name", "لا توجد جهات اتصال": "No contacts", "المحافظة / المنطقة": "Province / region", "الأدوار والصلاحيات": "Roles & permissions", "إدخال الرقم يدويًا": "Enter number manually", "لا توجد مهام معلقة": "No pending tasks", "فك قفل كل الحسابات": "Unlock all accounts", "اكتب RESET للتأكيد": "Type RESET to confirm", "بادئة الترقيم {STD": "Numbering prefix {STD", "نوع قاعدة البيانات": "Database type", "المراجعات والتقويم": "Audits & calendar", "المستخدم غير موجود": "User not found", "أدخل البند والمبلغ": "Enter the item and amount", "موعد مراجعة التجديد": "Recertification audit date", "لا توجد أوامر فوترة": "No invoice orders", "كلمة المرور الحالية": "Current password", "الإجراءات التصحيحية": "Corrective actions", "سجل الأرقام الصادرة": "Issued numbers log", "حسب المراجع الرئيسي": "By lead auditor", "بحث (مستخدم أو حدث)": "Search (user or event)", "تصدير نسخة احتياطية": "Export backup", "مراجعات هذا الأسبوع": "Audits this week", "المعايير المؤهل لها": "Qualified standards", "تم تغيير كلمة المرور": "Password changed", "تاريخ انتهاء التمديد": "Extension expiry date", "ربط بمراجع (اختياري)": "Link to auditor (optional)", "تم تغيير الحالة إلى:": "Status changed to:", "نظام الإدارة البيئية": "Environmental management system", "المراجعات المكلف بها": "Assigned audits", "تم حفظ بيانات الشركة": "Company data saved", "تعذّر تحميل البيانات": "Could not load data", "توليد الخطة تلقائيًا": "Generate plan automatically", "ليس لديك صلاحية حفظ:": "You don't have permission to save:", "التوعية بـ ISO 45001": "ISO 45001 awareness", "مسؤول التواصل الرئيسي": "Main contact person", "تم حفظ بيانات المراجع": "Auditor data saved", "سياسة الجودة وأهدافها": "Quality policy & objectives", "تم فك قفل كل الحسابات": "All accounts unlocked", "إعداد النظام لأول مرة": "First-time setup", "الاسم / الاسم التجاري": "Name / trade name", "استيراد نسخة احتياطية": "Import backup", "لازم حالتين على الأقل": "At least two statuses are required", "تم حفظ إعدادات الترقيم": "Numbering settings saved", "كلمة مرور حساب الطوارئ": "Emergency account password", "— لا يمكن تغيير الحالة": "— status can't be changed", "إضافة موقع جديد للشركة": "Add a new company site", "تعذّر الاتصال بالسيرفر": "Could not reach the server", "النسخة لا تحتوي بيانات": "The backup contains no data", "(مع تغيير كلمة المرور)": "(with password change)", "صيغة الأدوار غير صحيحة": "Invalid roles format", "استفسارات بانتظار الرد": "Inquiries awaiting reply", "مراجعات تم تقييمه فيها": "Audits evaluated in", "تم توليد خطة المراجعات": "Audit plan generated", "نظام إدارة سلامة الغذاء": "Food safety management system", "الرقم العشوائي (إلزامي)": "Random number (required)", "استفسارات تم الرد عليها": "Answered inquiries", "محاولة دخول طوارئ فاشلة": "Failed emergency sign-in", "شهادة نظام سلامة الغذاء": "Food safety system certification", "بيانات الدخول غير صحيحة": "Incorrect sign-in details", "طوارئ: إعادة ضبط المصنع": "Emergency: factory reset", "أرقام الأدوار غير صحيحة": "Invalid role IDs", "تظهر لحساب erpadmin فقط": "Visible to erpadmin only", "أضف مراجعًا نشطًا أولًا": "Add an active auditor first", "اكتب الاسم ثم اضغط إضافة": "Type the name, then press Add", "إضافة إلى السيرة الذاتية": "Add to CV", "شهادات تنتهي خلال 90 يوم": "Certificates expiring in 90 days", "عدد خانات الجزء العشوائي": "Random part length", "أدخل تاريخ الإصدار أولًا": "Enter the issue date first", "أضف موقعًا من ملف الشركة": "Add a site from the company file", "اسم المستخدم (إنجليزي) *": "Username (English) *", "نظام إدارة أمن المعلومات": "Information security management system", "تمت إضافة الموقع للشهادة": "Site added to certificate", "المنطقة الصناعية الثانية": "Second Industrial Zone", "إدارة الشهادات والمراجعات": "Certificate & Audit Management", "تأكيد كلمة المرور الجديدة": "Confirm new password", "الصلاحيات والصفة الوظيفية": "Permissions & job capacity", "لا يمكن حذف آخر مدير نظام": "Can't delete the last system admin", "لا يمكن الحذف — مستخدم في": "Can't delete — used in", "الممارسات الزراعية الجيدة": "Good agricultural practices", "طوارئ: فك قفل كل الحسابات": "Emergency: unlock all accounts", "طوارئ: استعادة حساب admin": "Emergency: restore admin account", "النسخ الاحتياطي والبيانات": "Backup & data", "مسح كل البيانات التشغيلية": "Clear all operational data", "مسح البيانات التجريبية": "Clear demo data", "اسم المستخدم مستخدم من قبل": "Username already taken", "التحكم في الوثائق والسجلات": "Document & record control", "الاستيراد لمدير النظام فقط": "Import is for system admins only", "أرقام فقط (مثال: 48217305)": "Digits only (e.g. 48217305)", "البيانات الشخصية والوظيفية": "Personal & job data", "النمط لازم يحتوي على {RAND": "The pattern must contain {RAND", "جاري تجهيز الشهادة للطباعة": "Preparing the certificate for printing", "(تلقائي — عشوائي لا يتكرر)": "(automatic — random, never repeats)", "تم تصدير النسخة الاحتياطية": "Backup exported", "شهادة محذوفة — الرقم محجوز": "Deleted certificate — number reserved", "أدخل مبلغ أمر الفوترة أولًا": "Enter the invoice order amount first", "محاولات كثيرة — انتظر دقيقة": "Too many attempts — wait a minute", "ليس لديك صلاحية لهذه الشاشة": "You don't have access to this screen", "كلمة مرور الطوارئ غير صحيحة": "Incorrect emergency password", "دورة حالات المراجعة الحالية": "Current audit status cycle", "تصنيع الأغذية القابلة للتلف": "Perishable food manufacturing", "نظام الصحة والسلامة المهنية": "Occupational health & safety system", "تأكيد كلمة المرور غير مطابق": "Password confirmation does not match", "اربط النظام بقاعدة البيانات": "Connect the system to the database", "لا توجد مواقع معرّفة للشركة.": "No sites defined for this company.", "ملف محلي SQLite (بدون إعداد)": "Local SQLite file (no setup)", "طلب نسخة إنجليزية من الشهادة": "Request an English copy of the certificate", "كلمة المرور 6 أحرف على الأقل": "Password must be at least 6 characters", "أرقام وحروف (مثال: K7Q2M9XA)": "Letters & digits (e.g. K7Q2M9XA)", "النسخة لا تحتوي دور مدير نظام": "The backup has no system admin role", "الجودة الوطنية — تسجيل الدخول": "National Quality — Sign in", "المعيار العالمي لسلامة الغذاء": "Global standard for food safety", "هذا الاسم محجوز لحساب الطوارئ": "This name is reserved for the emergency account", "كلمة المرور الحالية غير صحيحة": "Current password is incorrect", "جارِ الاتصال بقاعدة البيانات…": "Connecting to the database…", "تهيئة النظام وإنشاء حساب admin": "System initialized and admin account created", "تعذّر الاتصال بقاعدة البيانات:": "Could not connect to the database:", "أدخل اسم المستخدم وكلمة المرور": "Enter the username and password", "لا توجد استفسارات بانتظار الرد": "No inquiries awaiting reply", "المركز السعودي للاعتماد (SAAC)": "Saudi Accreditation Center (SAAC)", "إدارة الشهادات والمراجعات — NQ": "Certificate & Audit Management — NQ", "رقم — محجوزة ولا يعاد استخدامها": "numbers — reserved, never reused", "الجودة الوطنية لتقنية المعلومات": "National Quality for IT", "لا يمكنك حذف حسابك وأنت داخل به": "You can't delete the account you're signed in with", "لا يمكن حذف دور مرتبط بمستخدمين": "Can't delete a role that has users", "كلمة المرور * (6 أحرف على الأقل)": "Password * (at least 6 characters)", "كلمة المرور *": "Password *", "الرقم ثابت ولا يتغير بعد الإصدار": "The number is fixed after issuance", "النسخ الاحتياطي لمدير النظام فقط": "Backup is for system admins only", "لا يمكنك إيقاف حسابك وأنت داخل به": "You can't suspend the account you're signed in with", "المستخدمون والصلاحيات وسجل النشاط": "Users, permissions & activity log", "المستخدمون والصلاحيات والنسخ الاحتياطي": "Users, permissions & backup", "تحليل المخاطر ونقاط التحكم الحرجة": "Hazard analysis & critical control points", "كلمة المرور الجديدة أقل من 6 أحرف": "New password is shorter than 6 characters", "— ارفع ملف App_Data/db.json يدويًا": "— upload App_Data/db.json manually", "أنت تستخدم كلمة المرور الافتراضية.": "You're using the default password.", "الحساب موقوف — تواصل مع مدير النظام": "Account suspended — contact the system admin", "انتهت الجلسة — سجّل الدخول مرة أخرى": "Session expired — please sign in again", "المراجعون — ملفات التأهيل والمراجعة": "Auditors — qualification & audit files", "— ويمكنك تغيير اسم المستخدم من شاشة": "— and you can change the username from the screen", "SQL Server (قاعدة بيانات MonsterASP)": "SQL Server (MonsterASP database)", "المجلس الوطني المصري للاعتماد (EGAC)": "Egyptian Accreditation Council (EGAC)", "تم إنشاء الشركة — أكمل باقي البيانات": "Company created — complete the remaining data", "كلمة مرور الطوارئ (erpadmin) للتأكيد": "Emergency password (erpadmin) to confirm", "لا توجد خطة — استخدم التوليد التلقائي": "No plan — use automatic generation", "لازم يفضل دور مدير نظام بكل الصلاحيات": "A system admin role with all permissions must remain", "الملف ليس نسخة احتياطية من هذا النظام": "This file is not a backup from this system", "ليس لديك صلاحية التعديل في هذه الشاشة": "You don't have edit permission on this screen", "تم التعديل وتحديث كل السجلات المرتبطة": "Updated, including all linked records", "عرض كل المراجعات (وليس المسندة لي فقط)": "Show all audits (not only those assigned to me)", "تمت استعادة admin — كلمة المرور: admin": "admin restored — password: admin", "كلمة المرور الجديدة (6 أحرف على الأقل)": "New password (at least 6 characters)", "تم إنشاء الشهادة — راجع المواقع والخطة": "Certificate created — review the sites and plan", "كلمة المرور لازم تكون 6 أحرف على الأقل": "Password must be at least 6 characters", "قفل الحساب 10 دقائق بعد 5 محاولات خاطئة": "Account locked for 10 minutes after 5 failed attempts", "استعادة حساب admin (كلمة المرور: admin)": "Restore admin account (password: admin)", "لا يمكن إيقاف أو تغيير دور آخر مدير نظام": "Can't suspend or change the role of the last system admin", "التعديل ده هيشيل كل مديري النظام — مرفوض": "This change would remove every system admin — rejected", "كلمة مرور الطوارئ ثابتة ولا تتغير من هنا": "The emergency password is fixed and can't be changed here", "كلمة مرور جديدة (اتركها فارغة بدون تغيير)": "New password (leave empty to keep it)", "تعذّر الاتصال بالسيرفر — تأكد من الإنترنت": "Could not reach the server — check your connection", "وضع العرض فقط — ليس لديك صلاحية التعديل هنا": "View only — you don't have edit permission here", "اختر مواقع/فروع الشركة التي تغطيها الشهادة:": "Choose the company sites/branches covered by this certificate:", "— تم استبدال المستخدمين، سجّل الدخول من جديد": "— users were replaced, please sign in again", "تم الاتصال لكن تعذّر حفظ الإعداد في App_Data:": "Connected, but could not save the setting in App_Data:", "تاريخ الانتهاء (يُحسب 3 سنوات إن تُرك فارغًا)": "Expiry date (3 years if left empty)", "رقم الشهادة مستخدم من قبل — اضغط توليد رقم آخر": "Certificate number already used — press Generate another number", "دورة الشهادة: مراقبة سنوية + تجديد قبل الانتهاء": "Certificate cycle: annual surveillance + recertification before expiry", "احفظ البيانات الأساسية أولًا لتفعيل باقي التبويبات": "Save the basic data first to enable the other tabs", "Connection string (من لوحة MonsterASP ← Databases)": "Connection string (from MonsterASP panel → Databases)", "زوّد عدد الخانات العشوائية — احتمالات التكرار عالية": "Increase the random digits — collision chance is high", "أدخل نص الاتصال بقاعدة البيانات (Connection string)": "Enter the database connection string", "تم إنشاء أمر فوترة — أدخل المبلغ من شاشة أوامر الفوترة": "Invoice order created — enter the amount from Invoice orders", "سيتم استبدال البيانات الحالية بالنسخة المستوردة. متابعة؟": "The current data will be replaced by the imported backup. Continue?", "اسم المستخدم: 3 أحرف على الأقل — حروف إنجليزية وأرقام و . _ - فقط": "Username: at least 3 characters — English letters, digits and . _ - only", "ثابتة داخل السيرفر ولا تتغير من هنا. لتغيير كلمة مرور أي مستخدم افتح شاشة": "is fixed on the server and can't be changed here. To change any user's password open", "مستخدم آخر عدّل نفس البيانات في نفس الوقت — تم تحميل آخر نسخة، راجع تعديلك": "Another user edited the same data at the same time — the latest version was loaded, please review your change", "دخول طوارئ (erpadmin) — كل الصلاحيات مفتوحة. سجّل الخروج بعد انتهاء الإصلاح.": "Emergency sign-in (erpadmin) — all permissions enabled. Sign out when you finish.", "سجل المراجعات التي تم تقييم المراجع خلالها. يمكن إضافة نتائج التقييم وربطها بالمراجعات لاحقًا.": "Audits in which this auditor was evaluated. Evaluation results can be added and linked later.", "الترتيب هنا هو تسلسل دورة المراجعة في ملف المراجعة (السابق / التالي). آخر حالة تعني اكتمال المراجعة.": "The order here is the audit cycle sequence in the audit file (previous / next). The last status means the audit is complete.", "كل شهادة جديدة تاخد رقم عشوائي تلقائي. النظام بيحتفظ بسجل دائم لكل رقم صدر، فالرقم ما يتكررش أبدًا حتى لو الشهادة اتحذفت.": "Every new certificate gets an automatic random number. The system keeps a permanent log of every issued number, so a number is never reused, even if the certificate is deleted.", "الاستيراد يقبل أيضًا ملف النسخة الاحتياطية من النسخة الأولى (ملف HTML المستقل) — بينقل البيانات فقط ويحافظ على المستخدمين الحاليين.": "Import also accepts a backup from the first version (standalone HTML file) — it moves the data only and keeps the current users.", "كل البيانات محفوظة على السيرفر في قاعدة البيانات، وأي تعديل بيتحفظ تلقائيًا ويظهر لباقي المستخدمين خلال ثوانٍ. صدّر نسخة احتياطية بانتظام واحتفظ بها في مكان آمن (فيها بيانات المستخدمين المشفرة).": "All data is stored on the server database. Every change is saved automatically and appears for other users within seconds. Export a backup regularly and keep it somewhere safe (it contains encrypted user data).", "ربط المستخدم بمراجع يجعل شاشة \"مراجعاتي المعلقة\" تعرض المراجعات المسندة له فقط. تعديل كلمة المرور أو الدور أو إيقاف الحساب يُخرج المستخدم من جلسته فورًا.": "Linking a user to an auditor makes \"My pending audits\" show only audits assigned to them. Changing the password or role, or suspending the account, signs the user out immediately.", "\"عرض\" يسمح بفتح الشاشة فقط، و\"تعديل\" يسمح بالإضافة والتعديل والحذف فيها. الشاشات غير المسموحة تختفي من القائمة، والسيرفر يرفض أي حفظ بدون صلاحية.": "\"View\" only opens the screen; \"Edit\" allows adding, editing and deleting in it. Screens without access are hidden from the menu, and the server rejects any save without permission.", "سيُحذف كل شيء (البيانات والمستخدمين والسجل) ويرجع النظام لأوله بحساب admin/admin.": "Everything (data, users and log) will be deleted and the system will reset with admin/admin.", "صدّر نسخة احتياطية أولًا.": "Export a backup first.", "سيتم حذف كل الشركات والمراجعين والشهادات والمراجعات والتدريب والفواتير والمهام والاستفسارات.": "All companies, auditors, certificates, audits, training, invoices, tasks and inquiries will be deleted.", "المستخدمون والأدوار والمعايير والإعدادات تبقى. متابعة؟": "Users, roles, standards and settings are kept. Continue?", "تعديل:": "Edited:", "تعديل الدور": "Edited role", "إضافة الدور": "Added role", "بحث": "Search", "عمر خالد": "Omar Khaled", "المظهر": "Appearance", "اللغة": "Language", "الوضع": "Mode", "فاتح": "Light", "داكن": "Dark", "لون النظام": "System color", "لون مخصص": "Custom color", "حفظ كلون افتراضي لكل المستخدمين": "Save as the default color for all users", "تم حفظ اللون الافتراضي": "Default color saved", "استرجاع الافتراضي": "Reset to default", "تطبيق": "Apply", "تم تطبيق المظهر": "Appearance applied", "إعدادات المظهر تُحفظ على هذا الجهاز. اللون الافتراضي يحدده مدير النظام لكل المستخدمين.": "Appearance settings are saved on this device. The default color is set by the system admin for all users.", "أنت": "You", "عدد الحقول": "Fields", "بادئة الترقيم {STD} (اختياري)": "Numbering prefix {STD} (optional)"};
+const AR_RE=/[؀-ۿ]/;
+const PATS=[
+ [/^عدد السجلات: (\d+)$/,m=>`Records: ${m[1]}`],
+ [/^صفحة (\d+) من (\d+)$/,m=>`Page ${m[1]} of ${m[2]}`],
+ [/^(\d+) خانات$/,m=>`${m[1]} digits`],
+ [/^آخر (\d+) حدث$/,m=>`Last ${m[1]} events`],
+ [/^الإجمالي: (.+) ر\.س$/,m=>`Total: ${m[1]} SAR`],
+ [/^([\d,]+) رقم — محجوزة ولا يعاد استخدامها$/,m=>`${m[1]} numbers — reserved, never reused`],
+ [/^عدد الاحتمالات: ([\d,]+) رقم لكل بادئة$/,m=>`Possible combinations: ${m[1]} per prefix`],
+ [/^(.+) \(رقم: (\d+)\)$/,m=>`${T(m[1])} (No. ${m[2]})`],
+ [/^(.+) \(عرض\)$/,m=>`${T(m[1])} (view)`],
+ [/^حذف (المستخدم|الدور) (.+)؟$/,m=>`Delete ${m[1]=="الدور"?"role":"user"} ${m[2]}?`],
+ [/^الحساب مقفول مؤقتًا بسبب محاولات خاطئة — حاول بعد (\d+) دقيقة$/,m=>`Account temporarily locked after failed attempts — try again in ${m[1]} min`],
+ [/^لا يمكن الحذف — الدور مستخدم لـ (\d+) مستخدم$/,m=>`Can't delete — the role is used by ${m[1]} user(s)`],
+ [/^تعديل: (.+)$/,m=>"Edited: "+m[1].split("، ").map(T).join(", ")],
+ [/^ليس لديك صلاحية حفظ: (.+)$/,m=>"You don't have permission to save: "+T(m[1])],
+ [/^بيانات غير معروفة: (.+)$/,m=>"Unknown data: "+m[1]],
+ [/^تعذّر الاتصال بقاعدة البيانات: ([\s\S]+)$/,m=>"Could not connect to the database: "+m[1]],
+ [/^تم الاتصال لكن تعذّر حفظ الإعداد في App_Data: ([\s\S]+)$/,m=>"Connected, but could not save the setting in App_Data: "+T(m[1])],
+ [/^تم تغيير الحالة إلى: (.+)$/,m=>"Status changed to: "+T(m[1])],
+ [/^تم إنشاء المراجعة (\d+)$/,m=>"Audit created "+m[1]],
+ [/^تم التنسيق يوم (.+)$/,m=>"Coordinated on "+m[1]],
+ [/^تم الاستيراد(.*)$/,m=>"Imported"+T(m[1])]];
+const PREFIX=[["تعديل المستخدم ","Edited user "],["إضافة المستخدم ","Added user "],["حذف المستخدم ","Deleted user "],["تعديل الدور ","Edited role "],["إضافة الدور ","Added role "],["حذف الدور ","Deleted role "],["إصدار فاتورة للمراجعة ","Invoice issued for audit "],["ملف المراجع — ","Auditor file — "],["أدخل ","Enter "]];
+function T(s){if(!s||!AR_RE.test(s))return s;const k=s.trim();if(!k)return s;
+ if(I18N[k]!==undefined)return s.replace(k,I18N[k]);
+ if(k.includes("\n"))return s.split("\n").map(T).join("\n");
+ for(const [re,f] of PATS){const m=k.match(re);if(m)return s.replace(k,f(m))}
+ for(const [a,b] of PREFIX)if(k.startsWith(a))return s.replace(k,b+T(k.slice(a.length)));
+ let m=k.match(/^([‹›＋●\s]+)(.+)$/);if(m)return s.replace(k,m[1]+T(m[2]));
+ m=k.match(/^(.+?)([:：.*\s]+)$/);if(m&&I18N[m[1]]!==undefined)return s.replace(k,I18N[m[1]]+m[2]);
+ for(const sep of [" — ","، "," · "]){if(k.includes(sep)){const p=k.split(sep),t=p.map(T);if(t.some((x,i)=>x!==p[i]))return s.replace(k,t.join(sep=="، "?", ":sep))}}
+ return s}
+const LS={get:(k,d)=>{try{return localStorage.getItem(k)||d}catch(e){return d}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
+let LANG=LS.get("nq_lang","ar");
+const TRA=["placeholder","title","aria-label"];
+function trAttrs(el){TRA.forEach(a=>{if(!el.hasAttribute(a))return;const v=el.getAttribute(a),K="__t_"+a;if(el[K+"o"]!==v)el[K]=v;const o=LANG=="en"?T(el[K]):el[K];if(o!==v)el.setAttribute(a,o);el[K+"o"]=o})}
+function trNode(n){if(n.nodeType===3){const p=n.parentElement;if(!p||p.closest("script,style,textarea,[data-notr]"))return;const cur=n.nodeValue;if(n.__o!==cur)n.__s=cur;const out=LANG=="en"?T(n.__s):n.__s;if(out!==cur)n.nodeValue=out;n.__o=out}
+ else if(n.nodeType===1){if(n.matches("script,style,[data-notr]"))return;trAttrs(n);
+  if(n.tagName==="INPUT"&&n.disabled&&n.type==="text"){if(n.__vo!==n.value)n.__v=n.value;const o=LANG=="en"?T(n.__v):n.__v;if(o!==n.value)n.value=o;n.__vo=o}
+  n.querySelectorAll&&n.querySelectorAll("input[disabled]").forEach(i=>{if(i.type==="text"){if(i.__vo!==i.value)i.__v=i.value;const o=LANG=="en"?T(i.__v):i.__v;if(o!==i.value)i.value=o;i.__vo=o}});
+  n.childNodes.forEach(trNode)}}
+new MutationObserver(ms=>{for(const m of ms){if(m.type=="childList")m.addedNodes.forEach(trNode);else if(m.type=="characterData")trNode(m.target);else trAttrs(m.target)}})
+ .observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:TRA});
+["alert","confirm","prompt"].forEach(f=>{const o=window[f].bind(window);window[f]=(m,...a)=>o(LANG=="en"?T(String(m)):m,...a)});
+const TITLE0=document.title;
+function applyLang(){const h=document.documentElement;h.lang=LANG;h.dir=LANG=="en"?"ltr":"rtl";document.title=LANG=="en"?T(TITLE0):TITLE0;
+ const l=$("#langLbl");if(l)l.textContent=LANG=="en"?"ع":"EN";document.querySelectorAll(".lgl").forEach(e=>e.textContent=LANG=="en"?"العربية":"English");trNode(document.body)}
+function setLang(l){LANG=l;LS.set("nq_lang",l);applyLang();if(ME)rerender(true);if($("#modal").classList.contains("on")&&window._appOpen)appearance()}
+function toggleLang(){setLang(LANG=="en"?"ar":"en")}
+
+/* ---------- الوضع والألوان ---------- */
+const PALETTE=["#0d7a77","#1f6feb","#4f46e5","#7c3aed","#a21caf","#be123c","#c2410c","#b45309","#15803d","#334155"];
+const DEF_COLOR="#0d7a77";
+let THEME=LS.get("nq_theme",(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light");
+const hexRgb=h=>{h=h.replace("#","");return [0,2,4].map(i=>parseInt(h.substr(i,2),16))};
+const mixC=(h,t,a)=>{const c=hexRgb(h),d=hexRgb(t);return "#"+c.map((x,i)=>Math.round(x+(d[i]-x)*a).toString(16).padStart(2,"0")).join("")};
+const curColor=()=>LS.get("nq_color","")||db.ui?.color||DEF_COLOR;
+function applyColor(){const h=curColor(),r=document.documentElement.style,[a,b,c]=hexRgb(h),dk=THEME=="dark";
+ r.setProperty("--p",dk?mixC(h,"#ffffff",.12):h);r.setProperty("--pd",mixC(h,"#000000",.25));r.setProperty("--pdd",mixC(h,"#000000",.55));r.setProperty("--p2",mixC(h,"#ffffff",.12));
+ r.setProperty("--pa",`${a},${b},${c}`);r.setProperty("--pl",`rgba(${a},${b},${c},${dk?.18:.1})`);r.setProperty("--pt",dk?mixC(h,"#ffffff",.55):mixC(h,"#000000",.25));
+ document.querySelector('meta[name=theme-color]')?.setAttribute("content",mixC(h,"#000000",.4))}
+function applyTheme(){document.documentElement.dataset.theme=THEME;applyColor();const b=$("#thBtn");if(b){b.innerHTML=`<i class="fa fa-${THEME=="dark"?"sun":"moon"}"></i>`}}
+function setTheme(t){THEME=t;LS.set("nq_theme",t);applyTheme();if(window._appOpen)appearance()}
+function toggleTheme(){setTheme(THEME=="dark"?"light":"dark")}
+function setColor(h){LS.set("nq_color",h);applyColor();if(window._appOpen)appearance()}
+function resetColor(){try{localStorage.removeItem("nq_color")}catch(e){}applyColor();if(window._appOpen)appearance()}
+function saveDefaultColor(){if(!need("settings"))return;db.ui=Object.assign({},db.ui,{color:curColor()});try{localStorage.removeItem("nq_color")}catch(e){}toast("تم حفظ اللون الافتراضي");applyColor();appearance()}
+function appearance(){window._appOpen=true;const c=curColor(),u=ME;
+ openM("المظهر",`<div style="grid-column:1/-1" class="apx">
+ ${u?`<div class="apuser"><div class="av big">${(u.name||u.username).trim()[0]}</div><div><b>${u.name||u.username}</b><small dir="ltr">${u.username}</small></div></div>`:""}
+ <label class="aplbl">اللغة</label><div class="seg"><button class="${LANG=="ar"?"on":""}" onclick="setLang('ar')">العربية</button><button class="${LANG=="en"?"on":""}" onclick="setLang('en')">English</button></div>
+ <label class="aplbl">الوضع</label><div class="seg"><button class="${THEME=="light"?"on":""}" onclick="setTheme('light')"><i class="fa fa-sun"></i> فاتح</button><button class="${THEME=="dark"?"on":""}" onclick="setTheme('dark')"><i class="fa fa-moon"></i> داكن</button></div>
+ <label class="aplbl">لون النظام</label><div class="sw">${PALETTE.map(p=>`<button style="background:${p}" class="${p==c?"on":""}" onclick="setColor('${p}')" aria-label="${p}"></button>`).join("")}
+ <label class="swc" title="لون مخصص" style="background:${c}"><input type="color" value="${c}" onchange="setColor(this.value)"><i class="fa fa-palette"></i></label></div>
+ <div class="apact"><button class="btn l sm" onclick="resetColor()">استرجاع الافتراضي</button>${u&&can("settings","edit")?`<button class="btn sm" onclick="saveDefaultColor()">حفظ كلون افتراضي لكل المستخدمين</button>`:""}</div>
+ <p class="aphint">إعدادات المظهر تُحفظ على هذا الجهاز. اللون الافتراضي يحدده مدير النظام لكل المستخدمين.</p>
+ ${u?`<div class="aplinks"><button class="btn l" onclick="closeM();go('password')"><i class="fa fa-key"></i> تغيير كلمة المرور</button><button class="btn l" style="color:var(--bad);border-color:var(--bad)" onclick="closeM();logout()"><i class="fa fa-right-from-bracket"></i> تسجيل خروج</button></div>`:""}</div>`)}
+const _openM0=openM;openM=function(t,h,s){if(t!=="المظهر")window._appOpen=false;$("#msave").style.display=s?"":"none";_openM0(t,h,s||(()=>{}))};
+const _closeM0=closeM;closeM=function(){window._appOpen=false;_closeM0()};
+db.ui=db.ui||{};
+const _applyItems0=applyItems;applyItems=function(items){_applyItems0(items);applyColor()};
+Object.assign(ICONS,{moon:'<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+ palette:'<path d="M12 22a10 10 0 1 1 10-10c0 2.8-2.2 4-4 4h-2a2 2 0 0 0-1.5 3.3A1.6 1.6 0 0 1 12 22z"/><circle cx="7.5" cy="10.5" r="1"/><circle cx="12" cy="7" r="1"/><circle cx="16.5" cy="10.5" r="1"/>',
+ globe:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>'});
+applyTheme();applyLang();
 
 paintIcons();
 boot();
